@@ -12,3 +12,6 @@
 使用说明：
 数据库在database文件夹里，网站登录用户名：admin，密码：123456，验证码:123456
 
+![image](https://github.com/wuyi23/WYRMS_NEW/blob/master/screenshots/login.png)
+![image](https://github.com/wuyi23/WYRMS_NEW/blob/master/screenshots/Index.png)
+![image](https://github.com/wuyi23/WYRMS_NEW/blob/master/screenshots/phoneWindows.png)
