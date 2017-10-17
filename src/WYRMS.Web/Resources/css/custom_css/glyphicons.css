@@ -1,0 +1,61 @@
+.bs-glyphicons {
+    padding-left   : 0;
+    padding-bottom : 1px;
+    margin-bottom  : 20px;
+    list-style     : none;
+    overflow       : hidden;
+}
+.bs-glyphicons li {
+    float      : left;
+    width      : 25%;
+    height     : 120px;
+    padding    : 20px 10px;
+    font-size  : 12px;
+    text-align : center;
+}
+@media only screen and (max-width : 660px) {
+    .bs-glyphicons li {
+        height : 130px;
+        width  : 50%;
+    }
+}
+.bs-glyphicons li:hover {
+    background-color : #dcdcdc;
+    padding          : 20px 10px;
+}
+.bs-glyphicons .glyphicon {
+    margin-top    : 5px;
+    margin-bottom : 10px;
+    font-size     : 24px;
+    color         : #428bca;
+}
+.bs-glyphicons > li:hover > .glyphicon {
+    font-size : 30px;
+}
+.bs-glyphicons .glyphicon-class {
+    display    : block;
+    text-align : center;
+    word-wrap  : break-word;
+}
+.input-group {
+    width         : 100%;
+    margin-bottom : 10px;
+}
+.input-group-addon {
+    border           : none;
+    background-color : transparent;
+}
+.input-group input[type="range"] {
+    border     : none;
+    box-shadow : none;
+}
+.input-group .form-control:last-child {
+    border-radius : 17px;
+}
+form {
+    text-align : center;
+    padding    : 10px;
+}
+input[type="range"] {
+    cursor : pointer;
+}

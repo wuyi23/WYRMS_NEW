@@ -1,0 +1,78 @@
+.alert-message {
+    margin: 20px 0;
+    padding: 20px;
+    border-left: 3px solid #eee;
+}
+
+.alert-message h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.alert-message p:last-child {
+    margin-bottom: 0;
+}
+
+.alert-message code {
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+.alert-message-success {
+    background-color: #F4FDF0;
+    border-color: #22d69d;
+}
+
+.alert-message-success h4 {
+    color: #22d69d;
+}
+
+.alert-message-danger {
+    background-color: #fdf7f7;
+    border-color: #fb8678;
+}
+
+.alert-message-danger h4 {
+    color: #fb8678;
+}
+
+.alert-message-warning {
+    background-color: #fcf8f2;
+    border-color: #ffb65f;
+}
+
+.alert-message-warning h4 {
+    color: #ffb65f;
+}
+
+.alert-message-info {
+    background-color: #f4f8fa;
+    border-color: #4fc1e9;
+}
+
+.alert-message-info h4 {
+    color: #4fc1e9;
+}
+
+.alert-message-default {
+    background-color: #EEE;
+    border-color: #dcdcdc;
+}
+
+.alert-message-notice {
+    background-color: #FCFCDD;
+    border-color: #BDBD89;
+}
+
+.alert-message-notice h4 {
+    color: #444;
+}
+
+/*general components*/
+
+.styled-list ul {
+    list-style: disc;
+}
+.styled-list li ul {
+    list-style-type: circle;
+}

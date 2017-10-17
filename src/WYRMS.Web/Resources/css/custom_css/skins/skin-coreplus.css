@@ -1,0 +1,51 @@
+
+.bg-coreplus-light {
+    background-color: #3D4E5D;
+    color: #fff !important
+}
+
+.bg-coreplus {
+    background-color: #313E4B;
+    color: #ebf4e4;
+}
+
+.skin-coreplus .navbar {
+    background-color: #313e4b;
+}
+
+.skin-coreplus .left-side {
+    background: #313e4b;
+}
+
+.skin-coreplus .sidebar a {
+    color: #808b9c;
+    -webkit-font-smoothing: antialiased;
+}
+
+.skin-coreplus .nav_profile {
+    background-color: #313e4b;
+}
+
+.skin-coreplus .profile-left .profile-thumb {
+    border: 2px solid #313e4b;
+}
+
+.skin-coreplus .content-profile .icon-list li a {
+    border: 1px solid #2e333b;
+}
+
+.skin-coreplus .icon-list li a:hover {
+    background: #3D4E5D;
+}
+
+.sidebar-right-opened #right {
+    right: 0;
+}
+.dropdown-menu > .dropdown-footer > a:hover, .dropdown-menu > .dropdown-footer > a:focus {
+     background-color: #3d4e5d;
+}
+@media screen and (min-width: 550px) {
+    .skin-coreplus .navbar .navbar-right > .nav {
+        margin-right: 15px;
+    }
+}

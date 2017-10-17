@@ -1,0 +1,32 @@
+.demo {
+    height: 300px;
+    width: 100%;
+}
+
+.demo>div:nth-child(2) {
+    position: relative;
+    width: 350px;
+    margin: auto
+}
+
+.demo .demo_hours {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.demo .demo_minutes {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+
+.demo .demo_seconds {
+    position: absolute;
+    left: 90px;
+    top: 90px;
+}
+
+.m-b-10 {
+    margin-bottom: 10px;
+}

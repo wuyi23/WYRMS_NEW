@@ -1,0 +1,25 @@
+/*-----------------------------------*\
+  $RESET
+\*-----------------------------------*/
+
+.btn_animation,
+.input {
+    padding: .75rem;
+    margin: 1px 0 0 5px;
+    border-radius: 4px;
+    float: left;
+    border: none;
+}
+
+.btn_animation:focus,
+.input:focus {
+    outline: none;
+}
+.m-a-10
+{
+    margin: 10px;
+}
+.swal2-modal .swal2-textarea
+{
+    resize: vertical;
+}

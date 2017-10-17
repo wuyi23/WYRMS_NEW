@@ -1,0 +1,136 @@
+/* wizard custom css */
+
+.wizard-modal p {
+    margin  : 0 0 10px;
+    padding : 0;
+}
+#wizard-ns-detail-servers,
+.wizard-additional-servers {
+    font-size   : 12px;
+    margin-top  : 10px;
+    margin-left : 15px;
+}
+#wizard-ns-detail-servers > li,
+.wizard-additional-servers li {
+    line-height     : 20px;
+    list-style-type : none;
+}
+#wizard-ns-detail-servers > li > img {
+    padding-right : 5px;
+}
+.wizard-modal .chzn-container .chzn-results {
+    max-height : 150px;
+}
+.wizard-addl-subsection {
+    margin-bottom : 40px;
+}
+.create-server-agent-key {
+    margin-left : 15px;
+    width       : 90%;
+}
+.wizard > .content > .body select.error {
+    background : rgb(251, 227, 228);
+    border     : 1px solid #fbc2c4;
+    color      : #8a1f11;
+}
+a {
+    cursor : pointer;
+}
+/**/
+
+#contact {
+    background-color : #f0f0f0;
+    margin-top       : -15px;
+    margin-bottom    : -15px;
+}
+.tabbable {
+    background-color : #fff;
+    border-right     : 1px solid rgba(232, 232, 232, 1);
+    height           : 400px;
+    overflow         : hidden;
+    margin-bottom    : 10px;
+}
+.tabbable:hover {
+    overflow-y : scroll;
+}
+.tabbable ul {
+    display    : list-item;
+    padding    : 0;
+    margin     : 0;
+    min-height : 420px;
+}
+.tabbable ul > li {
+    display       : block;
+    padding       : 10px;
+    border-bottom : 1px solid #e0e0e0;
+    margin        : 0;
+    width         : 100%;
+}
+.tabbable ul > li img {
+    width         : 40px;
+    height        : 40px;
+    margin-right  : 15px;
+    border-radius : 50%;
+    float         : left;
+}
+.tabbable ul li.active {
+    background-color : #f0f0f0;
+    margin           : 0;
+    width            : 100%;
+}
+.nav.nav-pills {
+    margin-bottom : 20px;
+}
+.pager li > a:hover,
+.pager li > a:focus {
+    background-color : #DBD4D4;
+}
+/* bootstrap wizard2 css */
+
+.stepwizard-step p {
+    margin-top : 10px;
+}
+.stepwizard-row {
+    display : table-row;
+}
+.stepwizard {
+    display  : table;
+    width    : 100%;
+    position : relative;
+}
+.stepwizard-row:before {
+    top              : 14px;
+    bottom           : 0;
+    position         : absolute;
+    content          : " ";
+    width            : 100%;
+    height           : 1px;
+    background-color : #ccc;
+    z-index          : 0;
+}
+.stepwizard-step {
+    display    : table-cell;
+    text-align : center;
+    position   : relative;
+}
+.btn-circle {
+    width         : 30px;
+    height        : 30px;
+    text-align    : center;
+    padding       : 6px 0;
+    font-size     : 12px;
+    line-height   : 1.428571429;
+    border-radius : 15px;
+}
+.btn-primary {
+    background-color : #428BCA;
+    border-color     : #428BCA;
+}
+.btn-primary:hover {
+    background-color : #428BCA;
+    border-color     : #428BCA;
+}
+.profile_pic {
+    height : 100%;
+    width  : 100%;
+}

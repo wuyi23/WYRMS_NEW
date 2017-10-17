@@ -1,0 +1,31 @@
+/***Portlet custom css***/
+
+.portlet {
+    clear         : both;
+    margin-top    : 0;
+    margin-bottom : 25px;
+    padding       : 0;
+}
+.ui-sortable-handle:not(.notsort) {
+    cursor : move;
+}
+.portlet > .portlet-body {
+    background-color : #fff;
+    padding          : 10px;
+    border           : 1px solid #ccc;
+    border-top       : none;
+}
+.portlet > .portlet-title {
+    padding   : 10px 10px 4px 10px;
+    color     : #fff;
+    font-size : 16px;
+}
+.portlet-placeholder {
+    border           : 1px dotted #ccc;
+    background-color : #dcdcdc;
+    margin           : 0 1em 1em 0;
+    height           : 130px;
+}
+.sortable {
+    min-height : 50px;
+}

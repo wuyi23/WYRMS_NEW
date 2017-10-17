@@ -1,0 +1,45 @@
+.input-group-addon.primary {
+    color: rgb(255, 255, 255);
+    background-color: #428BCA;
+    border-color: #428BCA;
+}
+.input-group-addon.success {
+    color: rgb(255, 255, 255);
+    background-color: #65a800;
+    border-color: #65a800;
+}
+.input-group-addon.info {
+    color: rgb(255, 255, 255);
+    background-color: #4fc1e9;
+    border-color: #4fc1e9;
+}
+.input-group-addon.warning {
+    color: rgb(255, 255, 255);
+    background-color: #ff931d;
+    border-color: #ff931d;
+}
+.input-group-addon.danger {
+    color: rgb(255, 255, 255);
+    background-color:#fc7070;
+    border-color: #fc7070;
+}
+.padding {
+padding: 9px 5px;
+}
+.padding7 {
+    padding-top:7px;
+}
+.marginTop {
+    margin-top:15px;
+}
+.page-header {
+    margin: 10px 0 20px 0;
+    font-size: 22px;
+}
+.has-error .help-block, .has-error .input-group-addon, .has-error .radio, .has-error .radio-inline {
+    color: #FE5B5B;
+}
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
+    position: absolute;
+    margin-left: 1px;
+}

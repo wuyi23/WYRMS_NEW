@@ -1,0 +1,30 @@
+#chart1 svg,
+#chart2 svg,
+#chart3 svg,
+#chart4 svg {
+    height : 300px;
+}
+#chart5 svg,
+#chart6 svg,
+#chart7 svg {
+    height : 400px;
+}
+.bg-panel {
+    background : url(../../img/light_grey.png);
+    height     : 100%;
+}
+.bg-panel-primary {
+    background : #4FC1E9;
+}
+#chart6 .nv-group {
+    fill-opacity : 0.5 !important;
+}
+#chart6 .nv-group.nv-series-2 {
+    fill-opacity : 0.7 !important;
+}
+@media screen and (max-width : 425px) {
+    .nv-legendWrap,
+    .panel-heading .clickable {
+        display : none;
+    }
+}

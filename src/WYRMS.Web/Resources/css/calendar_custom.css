@@ -1,0 +1,257 @@
+/* calendar custome code */
+
+.pallete-item {
+    width  : 140px;
+    float  : left;
+    margin : 0 0 20px 20px
+}
+.palette {
+    font-size      : 14px;
+    line-height    : 1.214;
+    color          : #fff;
+    margin         : 0;
+    padding        : 15px;
+    text-transform : uppercase
+}
+.palette dt,
+.palette dd {
+    line-height : 1.429
+}
+.palette dt {
+    display     : block;
+    font-weight : 700;
+    opacity     : .8;
+    filter      : alpha(opacity=80)
+}
+.palette dd {
+    font-weight            : 300;
+    margin-left            : 0;
+    opacity                : .8;
+    filter                 : alpha(opacity=80);
+    -webkit-font-smoothing : subpixel-antialiased
+}
+.content .palette-white {
+    background-color : #FFF
+}
+.content .palette-primary,
+.content .palette-primary:hover {
+    background-color : #428BCA;
+}
+.content .palette-success,
+.content .palette-success:hover {
+    background-color : #22d69d;
+}
+.content .palette-info,
+.content .palette-info:hover {
+    background-color : #4FC1E9;
+}
+.content .palette-warning,
+.content .palette-warning:hover {
+    background-color : #FFb65f;
+}
+.content .palette-danger,
+.content .palette-danger:hover {
+    background-color : #Fb8678;
+}
+.content .palette-default,
+.content .palette-default:hover {
+    background-color : #DCDCDC;
+}
+.box {
+    position              : relative;
+    border                : 1px solid #22d69d;
+    background            : #fff;
+    margin-bottom         : 20px;
+    -webkit-border-radius : 3px;
+    -moz-border-radius    : 3px;
+    border-radius         : 3px;
+    width                 : 100%;
+    box-shadow            : 0 0 3px 0 rgba(0, 0, 0, 0.1)
+}
+.box .box-title {
+    position              : relative;
+    -webkit-border-radius : 3px 3px 0 0;
+    -moz-border-radius    : 3px 3px 0 0;
+    border-radius         : 3px 3px 0 0;
+    color                 : #444;
+    box-shadow            : inset 0 1px 0 0 rgba(255, 255, 255, 1);
+    background            : #f8f8f8;
+    border-bottom         : 1px solid #e4e4e4;
+    padding               : 10px
+}
+.box .box-title:before,
+.box .box-title:after {
+    display : table;
+    content : " "
+}
+.box .box-title:after {
+    clear : both
+}
+.box .box-title > i {
+    display   : inline-block;
+    margin    : 0 10px 0 0;
+    font-size : 18px;
+    float     : left;
+    cursor    : default
+}
+.box .box-title h3 {
+    color       : #505050;
+    text-shadow : 1px 1px 0 #FFF;
+    display     : inline-block;
+    margin      : 0;
+    font-size   : 17px;
+    font-weight : 600;
+    float       : left;
+    cursor      : default
+}
+.box .box-title a:not(.btn) {
+    color : #444
+}
+.box .box-title > .box-toolbar .dropdown-menu {
+    margin-top : -7px;
+    min-width  : 60px
+}
+.box .box-body {
+    padding                            : 10px;
+    -webkit-border-top-left-radius     : 0;
+    -webkit-border-top-right-radius    : 0;
+    -webkit-border-bottom-right-radius : 3px;
+    -webkit-border-bottom-left-radius  : 3px;
+    -moz-border-radius-topleft         : 0;
+    -moz-border-radius-topright        : 0;
+    -moz-border-radius-bottomright     : 3px;
+    -moz-border-radius-bottomleft      : 3px;
+    border-top-left-radius             : 0;
+    border-top-right-radius            : 0;
+    border-bottom-right-radius         : 3px;
+    border-bottom-left-radius          : 3px
+}
+.box .box-body > table,
+.box .box-body > .table {
+    margin-bottom : 0
+}
+.box .box-body.chart-responsive {
+    width    : 100%;
+    overflow : hidden
+}
+.box .box-body > .chart {
+    position : relative;
+    overflow : hidden;
+    width    : 100%
+}
+.box-body .external-event {
+    color     : #FFF;
+    padding   : 10px;
+    font-size : 12px
+}
+.box-body #external-events .well {
+    padding : 10px;
+    margin  : 10px 0 0
+}
+.box .box-body .fc {
+    margin-top : 5px
+}
+#color-chooser a {
+    color : #FFF
+}
+.fc-event-inner {
+    padding : 2px 2px
+}
+.fc-event {
+    background : #Fb8678;
+    border     : none
+}
+.box .box-body .fc-header-title h2 {
+    font-size   : 15px;
+    line-height : 1.6em;
+    color       : #666;
+    margin-left : 10px
+}
+.box .box-body .fc-header-right {
+    padding-right : 10px
+}
+.box .box-body .fc-header-left {
+    padding-left : 10px
+}
+.box .box-body .fc-widget-header {
+    padding : 10px 0
+}
+.box .box-body .fc-widget-header:first-of-type,
+.box .box-body .fc-widget-content:first-of-type {
+    border-left  : 0;
+    border-right : 0
+}
+.box .box-body .fc-widget-header:last-of-type,
+.box .box-body .fc-widget-content:last-of-type {
+    border-right : 0
+}
+.box .box-body .fc-widget-content {
+    padding : 5px
+}
+.box .box-body .table {
+    margin-bottom : 0
+}
+.box .box-footer {
+    border-top                         : 1px solid #f4f4f4;
+    -webkit-border-top-left-radius     : 0;
+    -webkit-border-top-right-radius    : 0;
+    -webkit-border-bottom-right-radius : 3px;
+    -webkit-border-bottom-left-radius  : 3px;
+    -moz-border-radius-topleft         : 0;
+    -moz-border-radius-topright        : 0;
+    -moz-border-radius-bottomright     : 3px;
+    -moz-border-radius-bottomleft      : 3px;
+    border-top-left-radius             : 0;
+    border-top-right-radius            : 0;
+    border-bottom-right-radius         : 3px;
+    border-bottom-left-radius          : 3px;
+    padding                            : 10px;
+    background-color                   : #fff
+}
+.box .box-group > .box {
+    margin-bottom : 5px
+}
+.box-bordered {
+    background : #f6f6f6;
+    border     : 2px dotted #dbdbdb;
+    padding    : 10px
+}
+.icheckbox_minimal,
+.iradio_minimal {
+    display        : inline-block;
+    vertical-align : middle;
+    margin         : 0;
+    padding        : 0;
+    width          : 18px;
+    height         : 18px;
+    border         : none;
+    /* cursor: pointer; */
+}
+.badge1 {
+    background-color : #fb8678;
+}
+/* Custom calendar */
+
+.external-event {
+    padding       : 3px 5px;
+    border-radius : 2px;
+    cursor        : pointer;
+    display       : inline-block;
+    margin        : 0 5px 5px 0;
+}
+.fc-event-time,
+.fc-event-title {
+    text-align : center;
+}
+.fc-basic-view .fc-week-number,
+.fc-basic-view .fc-day-number {
+    padding : 0 8px;
+}
+.dropdown-menu {
+    padding : 0;
+}
+@media only screen and (max-width : 320px) {
+    .fc-right > .fc-button-group {
+        margin-top : 10px;
+    }
+}

@@ -1,0 +1,50 @@
+.input-group {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.input-group-addon {
+    border: none;
+    background-color: transparent;
+}
+
+.input-group input[type="range"] {
+    border: none;
+    box-shadow: none;
+}
+
+.input-group .form-control:last-child {
+    border-radius: 17px;
+}
+
+form {
+    text-align: center;
+    padding: 10px;
+}
+
+input[type="range"] {
+    cursor: pointer;
+}
+
+.name {
+    display: block;
+}
+
+.preview {
+    padding: 30px 10px;
+    font-size: 12px;
+    height: 120px;
+}
+
+.preview:hover {
+    background-color: #dcdcdc;
+}
+
+.preview i {
+    color: #428bca;
+    font-size: 24px;
+}
+
+.preview:hover i {
+    font-size: 30px;
+}

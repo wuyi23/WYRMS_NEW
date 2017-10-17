@@ -1,0 +1,41 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>AcceptMsg</title>
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+    <script src="~/Scripts/jquery.signalR-2.2.1.min.js"></script>
+    <script src="~/signalr/hubs"></script>
+</head>
+<body>
+<div>
+
+</div>
+</body>
+<script>
+    (function ($) {
+
+
+        $(document).ready(function () {
+
+
+            //接收信息
+            var allHub = $.connection.allHub;//对应后台的 类 AllHub
+            allHub.client.notice = function (msg) {
+                alert(msg);
+            }
+
+            $.connection.hub.start();
+
+             
+
+        });
+    })(jQuery);
+</script>
+</html>
+

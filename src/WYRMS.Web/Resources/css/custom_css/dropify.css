@@ -1,0 +1,20 @@
+.dropify-wrapper,
+.dropify-wrapper .dropify-clear {
+    font-family: "Open Sans", sans-serif, verdana;
+}
+
+.dropify-wrapper.has-error {
+    border-color: #fb8678;
+}
+
+.dropify-errors-container.visible {
+    background-color: #fb8678;
+}
+
+.dropify-wrapper .dropify-message .dropify-error {
+    color: #fb8678;
+}
+.p-30
+{
+    padding: 30px;
+}

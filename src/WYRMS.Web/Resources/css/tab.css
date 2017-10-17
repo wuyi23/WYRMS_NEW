@@ -1,0 +1,168 @@
+.faq-cat-content {
+    margin-top : 25px;
+}
+.faq-cat-tabs li a {
+    padding          : 15px 10px 15px 10px;
+    background-color : #ffffff;
+    border           : 1px solid #dddddd;
+    color            : #777777;
+}
+.nav-tabs li a:focus,
+.panel-heading a:focus {
+    outline : none;
+}
+.panel-heading a,
+.panel-heading a:hover,
+.panel-heading a:focus {
+    text-decoration : none;
+    color           : #777777;
+}
+.faq-cat-content .panel-heading:hover {
+    background-color : #efefef;
+}
+.active-faq {
+    border-left : 5px solid #888888;
+}
+.panel-faq .panel-heading .panel-title span {
+    font-size   : 13px;
+    font-weight : normal;
+}
+.nav-tabs-custom > .nav-tabs > li.active {
+    border-top-color : #3c8dbc;
+}
+/* tool bar */
+
+.btn-toolbar {
+    width   : 40px;
+    height  : 40px;
+    padding : 10px 6px;
+}
+.tool-item {
+    display        : block;
+    text-align     : center;
+    padding-bottom : 10px;
+    padding-right  : 17px;
+    transition     : none;
+}
+.tool-item:hover {
+    color      : #fff;
+    background : 0 !important;
+}
+.toolbar_animate {
+    padding : 25px;
+}
+.btn-toolbar-primary, .btn-toolbar-primary:hover {
+    background-color : #428BCA !important;
+}
+.btn-toolbar-danger, .btn-toolbar-danger:hover {
+    background-color : #FB8678 !important;
+}
+.btn-toolbar-warning,.btn-toolbar-warning:hover  {
+    background-color : #FFB65F !important;
+}
+.btn-toolbar-info, .btn-toolbar-info:hover {
+    background-color : #4FC1E9 !important;
+}
+.btn-toolbar-success, .btn-toolbar-success:hover  {
+    background-color : #22D69D !important;
+}
+.toolbar-primary {
+    background : #428BCA;
+}
+.toolbar-primary .tool-item.selected,
+.toolbar-primary .tool-item:hover {
+    background : #428BCA;
+}
+.toolbar-danger {
+    background : #FB8678;
+}
+.toolbar-danger .tool-item.selected,
+.toolbar-danger .tool-item:hover {
+    background : #FB8678;
+}
+.toolbar-warning {
+    background : #FFB65F;
+}
+.toolbar-danger .tool-item.selected,
+.toolbar-danger .tool-item:hover {
+    background : #FFB65F;
+}
+.toolbar-info {
+    background : #4FC1E9;
+}
+.toolbar-info .tool-item.selected,
+.toolbar-info .tool-item:hover {
+    background : #4FC1E9;
+}
+.toolbar-success {
+    background : #22D69D;
+}
+.toolbar-success .tool-item.selected,
+.toolbar-success .tool-item:hover {
+    background : #22D69D;
+}
+.btn-toolbar-light,
+.toolbar-light {
+    background-color : #dcdcdc;
+}
+.btn-toolbar-light.pressed,
+.btn-toolbar-light:hover {
+    background-color : #e4e4e4;
+}
+.btn-toolbar-dark,
+.toolbar-dark {
+    background-color : #4fc1e9;
+}
+.btn-toolbar-dark.pressed,
+.btn-toolbar-dark:hover {
+    background-color : #48bae2;
+}
+.btn-toolbar-default i {
+    color : #fff;
+}
+.toolbar-info.tool-top .arrow {
+    border-color : #4FC1E9 transparent transparent;
+}
+.toolbar-light.tool-top .arrow {
+    border-color : #dcdcdc transparent transparent;
+}
+.toolbar-dark.tool-top .arrow {
+    border-color : #4fc1e9 transparent transparent;
+}
+.toolbar-primary.tool-top .arrow {
+    border-color : #428BCA transparent transparent;
+}
+.toolbar-warning.tool-top .arrow {
+    border-color : #FFB65F transparent transparent;
+}
+.toolbar-success.tool-top .arrow {
+    border-color : #22D69D transparent transparent;
+}
+.toolbar-success.tool-right .arrow {
+    border-color : transparent #22D69D transparent transparent;
+}
+.toolbar-danger.tool-bottom .arrow {
+    border-color : transparent transparent #fb8678;
+}
+.toolbar-danger.tool-top .arrow {
+    border-color : #fb8678 transparent transparent;
+}
+.toolbar-warning.tool-left .arrow {
+    border-color : transparent transparent transparent #ffb65f;
+}
+.toolbar-info.tool-right .arrow {
+    border-color : transparent #4FC1E9 transparent transparent;
+}
+.toolbar-success.tool-bottom .arrow {
+    border-color : transparent transparent #22D69D;
+}
+.toolbar-danger.tool-left .arrow {
+    border-color : transparent transparent transparent #FB8678;
+}
+/*toolbar responsive*/
+
+@media only screen and (max-width : 768px) {
+    .feature-toolbar {
+        margin-top : 10px;
+    }
+}

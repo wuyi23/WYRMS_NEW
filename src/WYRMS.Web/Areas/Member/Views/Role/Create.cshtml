@@ -1,0 +1,67 @@
+﻿@using WYRMS.ViewModel.Member
+@model RoleVM
+
+@Html.HiddenFor(t => t.Id)
+
+<div class="modal-body">
+
+    <div class="form-group">
+        <div class="col-sm-2">
+            <label style="color: red; margin-left: -8px;">*</label>@Html.LabelFor(model => model.RoleName, new { @class = "control-label" })
+        </div>
+        <div class="col-sm-10">
+            @Html.TextBoxFor(model => model.RoleName, new { @class = "form-control", @placeholder = "请输入角色名称" })
+            @Html.ValidationMessageFor(model => model.RoleName)
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-2">
+            @Html.LabelFor(model => model.Description, new { @class = "control-label" })
+        </div>
+        <div class="col-sm-10">
+            @Html.TextBoxFor(model => model.Description, new { @class = "form-control", @placeholder = "请输入描述信息" })
+            @Html.ValidationMessageFor(model => model.Description)
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <div class="col-sm-2">
+            <label style="color:red; margin-left: -8px;">*</label>
+            @Html.LabelFor(model => model.OrderSort, new { @class = "control-label" })
+        </div>
+        <div class="col-sm-10">
+            @Html.TextBoxFor(model => model.OrderSort, new { @class = "form-control", @placeholder = "请输入排序序号" })
+            @Html.ValidationMessageFor(model => model.OrderSort)
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-2">
+            @Html.LabelFor(model => model.Enabled, new { @class = "control-label" })
+        </div>
+        <div class="col-sm-10">
+
+            @Html.CheckBoxFor(model => model.Enabled)
+            @Html.ValidationMessageFor(model => model.Enabled)
+
+        </div>
+    </div>
+
+
+</div>
+
+
+
+<script>
+    $(function () {
+        $('input.myCheck').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue',
+            increaseArea: '20%' // optional
+        });
+    });
+</script>
+
+

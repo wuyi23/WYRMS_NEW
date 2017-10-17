@@ -1,0 +1,184 @@
+/* left menu icons */
+
+#menu .navigation .menu-icon {
+    text-align: center;
+    font-size: 20px;
+}
+
+#menu .navigation > li > a {
+    padding: 14px 24px;
+}
+
+#menu .navigation a {
+    padding: 11px 24px;
+}
+
+.left-side,
+.sidebar,
+.menu-dropdown > a,
+#menu .navigation {
+    width: 80px;
+}
+
+.right-side {
+    margin-left: 80px;
+}
+
+@media screen and (max-width: 992px) {
+    .right-side {
+        margin-left: 0;
+    }
+
+    .relative .right-side {
+        margin-left: -160px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .right-side.strech {
+        margin-left: 0;
+    }
+}
+
+@media screen and (width: 992px) {
+    .left-side {
+        top: 0;
+    }
+}
+
+/* drop list open on hover */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-dropdown,
+#menu .navigation > li:not(.menu-dropdown) > a {
+    position: relative;
+    width: 80px;
+}
+
+#menu .menu-dropdown > ul,
+#menu .menu-dropdown-open-ul {
+    position: absolute;
+    width: 250px;
+    top: 0;
+    right: -250px;
+    z-index: 2;
+    display: none;
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+#menu .navigation > li:hover > a {
+    background-color: #48CFAD;
+    color: #FFF;
+}
+
+#menu .menu-dropdown:hover > ul,
+#menu .menu-dropdown:hover > ul.collapse {
+    display: block;
+    height: auto;
+    z-index: 1000;
+    background-color: #313E4B;
+}
+
+#menu .navigation {
+    padding: 4px 0 15px;
+    border-bottom: 0;
+}
+
+.nav_profile .profile-left {
+    padding: 10px;
+    border: 0 ;
+}
+
+#menu .menu-dropdown .sidebarbottom {
+    top: auto;
+    bottom: 0;
+}
+
+/*----------Fixed chat Icon-----------*/
+
+.fixedchaticon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.fixedchatdiv {
+    border: 1px solid #AAA;
+    height: 300px;
+    width: 252px;
+    position: fixed;
+    right: 75px;
+    bottom: 20px;
+    display: none;
+}
+
+.showchat {
+    display: block;
+}
+
+.chatlabel {
+    position: absolute;
+    top: -5px;
+    right: -3px;
+    border-radius: 50%;
+    padding: 3px 6px;
+}
+
+#right {
+    position: absolute;
+    right: 0;
+}
+
+.rightsidebar-right .rightsidebar-right-content .rightsidebar-right-heading.rightsidebar-right-heading-first {
+    margin: -20px -20px 0;
+    padding-top: 20px;
+}
+
+@media screen and (max-width: 500px) {
+    #right {
+        width: 200px;
+    }
+
+    .fixedchatdiv {
+        width: 202px;
+        right: 55px;
+    }
+}
+
+/*chat box animation*/
+
+@-webkit-keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(20%, 0, 0)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(20%, 0, 0)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+    }
+}
+@media screen and (max-width: 480px) {
+    .navbar-nav > .messages-menu > .dropdown-menu {
+        right: -185px;
+    }
+}

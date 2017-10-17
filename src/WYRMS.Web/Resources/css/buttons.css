@@ -1,0 +1,229 @@
+/*button color*/
+
+.tags a {
+    border             : 1px solid #DDD;
+    display            : inline-block;
+    color              : #717171;
+    background         : #FFF;
+    -webkit-box-shadow : 0 1px 1px 0 rgba(180, 180, 180, 0.1);
+    box-shadow         : 0 1px 1px 0 rgba(180, 180, 180, 0.1);
+    -webkit-transition : all .1s ease-in-out;
+    -moz-transition    : all .1s ease-in-out;
+    -o-transition      : all .1s ease-in-out;
+    transition         : all .1s ease-in-out;
+    border-radius      : 2px;
+    margin             : 0 3px 6px 0;
+    padding            : 5px 10px
+}
+.tags a:hover {
+    border-color : #08C;
+}
+.tags a.primary {
+    color            : #FFF;
+    background-color : #4FC1E9;
+    border-color     : #4FC1E9;
+}
+.tags a.success {
+    color            : #FFF;
+    background-color : #A0D468;
+    border-color     : #A0D468;
+}
+.tags a.info {
+    color            : #FFF;
+    background-color : #48CFAD;
+    border-color     : #48CFAD;
+}
+.tags a.warning {
+    color            : #FFF;
+    background-color : #FFCE54;
+    border-color     : #FFCE54;
+}
+.tags a.danger {
+    color            : #FFF;
+    background-color : #FD9883;
+    border-color     : #FD9883;
+}
+/*Panel tabs*/
+
+.panel-tabs {
+    position      : relative;
+    bottom        : 0;
+    clear         : both;
+    border-bottom : 1px solid transparent;
+}
+.panel-tabs > li {
+    float         : left;
+    margin-bottom : -1px;
+}
+.panel-tabs > li > a {
+    margin-right  : -12px;
+    margin-top    : -6px;
+    line-height   : .85;
+    border        : 1px solid transparent;
+    border-radius : 4px 4px 0 0;
+    color         : #ffffff;
+}
+.panel-tabs > li > a:hover {
+    border-color     : transparent;
+    color            : #ffffff;
+    background-color : transparent;
+}
+.panel-tabs > li.active > a,
+.panel-tabs > li.active > a:hover,
+.panel-tabs > li.active > a:focus {
+    color                 : #fff;
+    cursor                : default;
+    -webkit-border-radius : 2px;
+    -moz-border-radius    : 2px;
+    border-radius         : 2px;
+    background-color      : rgba(255, 255, 255, .23);
+    border-bottom-color   : transparent;
+}
+.kal {
+    margin-top : -20px;
+    font-size  : 15px;
+}
+/*icon picker  */
+
+#wraper1 {
+    position    : absolute;
+    width       : 400px;
+    left        : 50%;
+    margin-left : -200px;
+    top         : 100px;
+}
+input {
+    padding-bottom : 30px;
+}
+.icon-popup {
+    position         : absolute;
+    width            : 278px;
+    height           : 268px;
+    color            : #000;
+    font-size        : 14px;
+    background-color : white;
+}
+.icon-popup:before {
+    content             : '';
+    display             : inline-block;
+    border-left         : 7px solid transparent;
+    border-right        : 7px solid transparent;
+    border-bottom       : 7px solid #ccc;
+    border-bottom-color : rgba(0, 0, 0, 0.2);
+    position            : absolute;
+    top                 : -7px;
+    left                : 6px;
+}
+.icon-popup:after {
+    content       : '';
+    display       : inline-block;
+    border-left   : 6px solid transparent;
+    border-right  : 6px solid transparent;
+    border-bottom : 6px solid #fff;
+    position      : absolute;
+    top           : -6px;
+    left          : 7px;
+}
+.icon-popup a:hover {
+    background-color : #eee;
+}
+.icon-popup .icon-title {
+    position         : relative;
+    background-color : #563d7c;
+    color            : #fff;
+    border           : 1px solid #463265;
+}
+.icon-popup .icon-title h4 {
+    margin      : 0;
+    padding     : 8px 10px;
+    font-size   : 17px;
+    font-weight : bold;
+}
+.pointer {
+    cursor : pointer;
+}
+.icon-popup .ip-control {
+    background-color : white;
+    height           : 40px;
+    margin-top       : -2px;
+    padding-top      : 2px;
+    border-bottom    : 1px solid #e5e5e5;
+}
+.icon-popup .ip-search {
+    width             : 171px;
+    padding           : 2px 0px 5px 27px;
+    margin-left       : 8px;
+    background-repeat : no-repeat;
+}
+.icon-popup .icon-list {
+    position : absolute;
+    top      : 43px;
+    bottom   : 0;
+    overflow : hidden;
+}
+.icon-list ul {
+    margin        : 0;
+    padding       : 0;
+    margin-bottom : 10px;
+}
+.icon-popup .ip-control ul {
+    margin  : 4px 0;
+    padding : 0;
+}
+.icon-popup .ip-control ul li {
+    float           : left;
+    list-style-type : none;
+}
+.icon-popup .ip-control ul li a {
+    margin-top : -3px;
+    color      : #373737;
+}
+.icon-popup .ip-control ul li:first-child {
+    margin-left : 3px;
+}
+.icon-popup .ip-control ul li:last-child {
+    position : absolute;
+    right    : 0;
+    top      : 9px;
+}
+.icon-list ul li {
+    display : inline-block;
+    margin  : 5px;
+    float   : left;
+    border  : 1px solid #eee;
+}
+.icon-list ul li a {
+    display         : block;
+    text-decoration : none;
+    color           : #373737;
+    padding         : 6px 10px;
+}
+.icon-list ul li a:hover {
+    color : #000;
+}
+/*poll */
+
+.panel-body:not(.two-col) {
+    padding : 0px
+}
+.glyphicon {
+    margin-right : 5px;
+}
+.glyphicon-new-window {
+    margin-left : 5px;
+}
+.panel-body .radio,
+.panel-body .checkbox {
+    margin-top    : 0;
+    margin-bottom : 0;
+}
+.panel-body .list-group {
+    margin-bottom : 0;
+}
+.margin-bottom-none {
+    margin-bottom : 0;
+}
+.panel-body .radio label,
+.panel-body .checkbox label {
+    display : block;
+}

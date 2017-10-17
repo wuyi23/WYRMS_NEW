@@ -1,0 +1,102 @@
+﻿@using WYRMS.ViewModel.Member
+@model ModuleVM
+@{
+    List<SelectListItem> parentList = ViewBag.ParentModuleList;
+}
+
+
+<link href="~/Resources/vendors/iCheck/css/square/blue.css" rel="stylesheet" />
+<link type="text/css" rel="stylesheet" href="~/Resources/vendors/hover/css/hover-min.css">
+<link rel="stylesheet" type="text/css" href="~/Resources/vendors/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="~/Resources/css/custom_css/advanced_modals.css">
+
+<div class="modal-body">
+    @Html.HiddenFor(t => t.Id)
+    <div class="form-group">
+        <div class="col-sm-2">
+            <label style="color: red; margin-left: -8px;">*</label>@Html.LabelFor(model => model.Name, new { @class = " control-label" })
+        </div>
+
+        <div class="col-sm-10">
+            @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-2">
+            @Html.LabelFor(model => model.ParentName, new { @class = "control-label" })
+        </div>
+        <div class="col-sm-10">
+            @Html.DropDownListFor(model => model.ParentId, parentList, "--请选择--", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.ParentId)
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-2">
+            <label style="color: red; margin-left: -8px;">*</label>@Html.LabelFor(model => model.Icon, new { @class = "control-label" })
+        </div>
+        <div class="col-sm-10">
+            @Html.TextBoxFor(model => model.Icon, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Icon)
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-2">
+            <label style="color: red; margin-left: -8px;">*</label>@Html.LabelFor(model => model.LinkUrl, new { @class = "control-label" })
+        </div>
+        <div class="col-sm-10">
+            @Html.TextBoxFor(model => model.LinkUrl, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.LinkUrl)
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-2">
+            <label style="color: red; margin-left: -8px;">*</label>@Html.LabelFor(model => model.Code, new { @class = "control-label" })
+        </div>
+
+        <div class="col-sm-10">
+            @Html.TextBoxFor(model => model.Code, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Code)
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-2">
+            @Html.LabelFor(model => model.Description, new { @class = "control-label" })
+        </div>
+        <div class="col-sm-10">
+            @Html.TextBoxFor(model => model.Description, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Description)
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-2">
+            @Html.LabelFor(model => model.IsMenu, new { @class = "control-label" })
+        </div>
+        <div class="checkbox icheck col-sm-10">
+            @Html.CheckBoxFor(model => model.IsMenu, new { @class = "myCheck" }) @*增加myCheck样式为了避免表格中的checkbox失效*@
+            @Html.ValidationMessageFor(model => model.IsMenu)
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-2">
+            @Html.LabelFor(model => model.Enabled, new { @class = "control-label" })
+        </div>
+        <div class="checkbox icheck col-sm-10">
+            @Html.CheckBoxFor(model => model.Enabled, new { @class = "myCheck" }) @*增加myCheck样式为了避免表格中的checkbox失效*@
+            @Html.ValidationMessageFor(model => model.Enabled)
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="~/Resources/js/custom_js/advanced_modals.js"></script>
+<script>
+    $(function () {
+        $('input.myCheck').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue',
+            increaseArea: '20%' // optional
+        });
+    });
+</script>

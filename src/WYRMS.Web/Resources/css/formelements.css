@@ -1,0 +1,38 @@
+.select2-container .select2-selection--single {
+    height : 34px;
+}
+.select2-container--default .select2-selection--multiple, .select2-container--default .select2-selection--single {
+    border-radius : 0;
+}
+.daterangepicker.opensleft:after {
+    display : none;
+}
+.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group {
+    margin-left : 0;
+}
+.file-input .input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group {
+    margin-left : -1px;
+}
+.file-error-message {
+    color : #FE5B5B;
+}
+.noresize {
+    resize : none;
+}
+.radio-inline + .radio-inline, .checkbox-inline + .checkbox-inline {
+    margin-left : 0;
+}
+img.flag {
+    height        : 16px;
+    width         : 28px;
+    padding-right : 10px;
+}
+.file-preview-image {
+    max-width : 100%;
+}
+.m-t-ng-8 {
+    margin-top : -8px;
+}
+.m-b-10 {
+    margin-bottom : 10px;
+}

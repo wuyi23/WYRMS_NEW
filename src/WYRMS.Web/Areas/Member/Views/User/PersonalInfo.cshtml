@@ -1,0 +1,72 @@
+﻿@using WYRMS.ViewModel.Member
+@model PersonalInfoVM
+
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">修改密码</h4>
+        </div>
+        <div class="modal-body">
+            @using (Html.BeginForm("EditPersionalInfo", "User", FormMethod.Post, new { id = "editPersonForm", @class = "form-horizontal" }))
+            {
+                @Html.HiddenFor(t => t.Id)
+                <div class="form-group">
+                    <div class="col-sm-3">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-10">
+                            <label style="color: red; margin-left: -8px;">*</label>@Html.LabelFor(model => model.Password, new { @class = " control-label" })
+                        </div>
+                    </div>
+
+                    <div class="col-sm-8">
+                        @Html.TextBoxFor(model => model.Password, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Password)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-3">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-10">
+                            <label style="color: red; margin-left: -8px;">*</label>@Html.LabelFor(model => model.NewPassword, new { @class = "control-label" })
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        @Html.TextBoxFor(model => model.NewPassword, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.NewPassword)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-3">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-10">
+                            <label style="color: red; margin-left: -8px;">*</label>@Html.LabelFor(model => model.ComfirmPassword, new { @class = " control-label" })
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        @Html.TextBoxFor(model => model.ComfirmPassword, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.ComfirmPassword)
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="modal-footer">
+            <button type="button" id="btnSavePwd" class="btn btn-primary">保存</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    $(function () {
+
+        $("#btnSavePwd").click(function () {
+            SaveModalForm("#editPersonalPwdDiv", "#editPersonForm");
+        });
+    });
+</script>
+
+

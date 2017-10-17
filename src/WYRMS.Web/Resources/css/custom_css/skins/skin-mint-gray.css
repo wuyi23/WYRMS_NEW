@@ -1,0 +1,176 @@
+.skin-mint-gray .logo {
+    background-color: #37BC9B;
+    border-right: 1px solid #37BC9B;
+}
+
+.skin-mint-gray .logo > h1 {
+    margin-top: 0;
+    font-size: 40px;
+    letter-spacing: 0.1em;
+    color: #fff;
+}
+
+.skin-mint-gray .navbar {
+    background-color: #37BC9B;
+    /*  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); */
+}
+
+.skin-mint-gray .nav_profile {
+    background-color: #EFEFEF;
+}
+
+.skin-mint-gray .navbar .nav a {
+    color: #555;
+}
+
+.skin-mint-gray .navbar .nav > li > a:hover,
+.skin-mint-gray .navbar .nav > li > a:active,
+.skin-mint-gray .navbar .nav > li > a:focus,
+.skin-mint-gray .navbar .nav .open > a,
+.skin-mint-gray .navbar .nav .open > a:hover,
+.skin-mint-gray .navbar .nav .open > a:focus {
+    color: #555;
+}
+
+.skin-mint-gray .navbar .navbar-right > .nav {
+    margin-right: 10px;
+}
+
+.skin-mint-gray .navbar .sidebar-toggle .icon-bar {
+    background: #fff;
+}
+
+.skin-mint-gray .sidebar .page-sidebar-menu > li {
+    border-bottom: 1px solid #fff;
+}
+
+.skin-mint-gray .sidebar .page-sidebar-menu > li:hover {
+    background: #3a4252;
+    border-bottom: 1px solid rgba(54, 60, 70, 0.5);
+}
+
+.skin-mint-gray .sidebar > .sidebar-menu > li > a {
+    margin-right: 1px;
+}
+
+.skin-mint-gray .left-side {
+    background: #efefef;
+}
+
+.skin-mint-gray .sidebar a {
+    color: #808b9c;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+}
+
+.skin-mint-gray .sidebar li.open a:hover {
+    background: #3a4252 !important;
+    text-decoration: none !important;
+}
+
+.skin-mint-gray .sidebar li.open ul:hover,
+.skin-mint-gray .sidebar li.open a ul:hover,
+.skin-mint-gray .sidebar li.open ul li:hover,
+a,
+a:hover {
+    text-decoration: none !important;
+}
+
+.skin-mint-gray .navbar .sidebar-toggle {
+    border: 1px solid #35b495;
+}
+
+.skin-mint-gray .content-profile .icon-list li a {
+    border: 1px solid #e2e2e2;
+}
+
+.skin-mint-gray a.navbar-btn.sidebar-toggle:hover {
+    background: #35b495;
+}
+
+.skin-mint-gray .icon-list li a:hover {
+    background: #35b495;
+}
+
+.skin-mint-gray .navbar-right .nav>li>a:hover {
+    background: #35b495;
+}
+
+.skin-mint-gray .sidebar-menu {
+    background: #efefef;
+}
+
+.skin-mint-gray .left-side li a i {
+    padding-top: 2px;
+    color: #808b9c;
+}
+
+.skin-mint-gray .sidebar .sidebar-menu .sub-menu > li {
+    margin: 0;
+    background: #E6E6E6;
+}
+
+.skin-mint-gray .navbar-right .nav .open > a {
+    background-color: #35b495;
+    border-color: #35b495;
+}
+
+.skin-mint-gray .navbar-nav > .user-menu > .dropdown-menu > li.user-header {
+    height: 140px;
+    padding: 6%;
+    background: #37BC9B;
+    text-align: center;
+}
+
+.skin-mint-gray li.dropdown-title {
+    padding: 16px;
+    background: #35B495;
+    font-size: 14px;
+    color: #fff;
+}
+
+.skin-mint-gray li.dropdown-footer {
+    padding: 16px;
+    background: #35B495;
+    border-bottom: 1px solid #ccc;
+    color: #fff;
+}
+
+.skin-mint-gray #right {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+    right: -250px;
+    background: #35B495;
+}
+
+.skin-mint-gray .nav_profile .profile-left .media-heading {
+    color: #313e4b;
+}
+
+.skin-mint-gray #menu li.active>a {
+    background: #ccc;
+    color: #fff;
+}
+
+.skin-mint-gray #menu .navigation .menu-icon {
+    color: #808b9c;
+}
+
+.skin-mint-gray .nav_profile .profile-left {
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.skin-mint-gray #menu .menu-dropdown>ul,
+#menu .menu-dropdown-open-ul {
+    background: #e2e2e2;
+}
+
+.skin-mint-gray #menu .navigation {
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.skin-mint-gray #menu li >a:hover {
+    color: #313e4b;
+}

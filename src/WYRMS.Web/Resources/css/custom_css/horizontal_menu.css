@@ -1,0 +1,82 @@
+/*global css*/
+.right-side {
+    margin-left : 0;
+}
+/*page level*/
+.horizontal_menu {
+    background-color : #FAFAFA;
+    border-bottom    : 0;
+    padding          : 0 10%;
+}
+.slimmenu .has-submenu .menu-list {
+    font-weight: 600;
+    color: #666;
+}
+.slimmenu .has-submenu .active {
+    background: #48CFAD;
+    color: #fff;
+}
+ul.slimmenu > li {
+    width : 16%;
+}
+ul.slimmenu li > ul {
+    padding-left : 0;
+}
+ul.slimmenu li .sub-toggle {
+    background : none;
+}
+ul.slimmenu li ul {
+    top    : 102%;
+    border : 1px solid #dcdcdc;
+}
+ul.slimmenu li ul li a {
+    padding : 12px 16px;
+    width   : 100%;
+}
+ul.slimmenu li ul li, ul.slimmenu li {
+    background : #fff;
+}
+ul.slimmenu li a:hover {
+    background : #f1f1f1;
+}
+.slimmenu .has-submenu .sub-list {
+    font-size : 14px !important;
+}
+.slimmenu .has-submenu ul li a {
+    font-size : 12px !important;
+}
+#navigation .has-submenu ul li {
+    width         : 100%;
+    border-bottom : 1px solid #eeeeee;
+}
+/*for smaller screens hemburger*/
+.menu-collapser {
+    color            : #555;
+    border           : 1px solid #ccc;
+    border-radius    : 4px;
+    background-color : #f5f5f5;
+    margin           : 5px;
+}
+ul.collapsed {
+    border : 1px solid #ccc;
+}
+.Sample_placehold {
+    width : 100%;
+}
+@media screen and (min-width : 993px) {
+    .main-menu:after {
+        content          : '';
+        height           : 70%;
+        width            : 1px;
+        position         : absolute;
+        right            : 0;
+        top              : 15%;
+        background-color : #e5e5e5;
+    }
+    .option-one {
+        width : 18% !important;
+    }
+    .horizontal_menu {
+        border-bottom : 1px solid #ccc;
+    }
+}

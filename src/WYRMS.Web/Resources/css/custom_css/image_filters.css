@@ -1,0 +1,57 @@
+
+.pagination figure {
+    max-width : 100px;
+}
+.pagination > li {
+    display : inline-block;
+    margin  : 6px;
+}
+@media screen and (max-width : 342px) {
+    .pagination {
+        margin-left : 2%
+    }
+}
+.pagination > li:hover, .active_filter {
+    cursor              : pointer;
+    -webkit-transform   : scale(1.1);
+    -moz-transform      : scale(1.1);
+    -o-transform        : scale(1.1);
+    -ms-transform       : scale(1.1);
+    transform           : scale(1.1);
+    transition-duration : 0.3s;
+}
+.active_filter {
+    cursor              : pointer;
+    -webkit-transform   : scale(1.15);
+    -moz-transform      : scale(1.15);
+    -o-transform        : scale(1.15);
+    -ms-transform       : scale(1.15);
+    transform           : scale(1.15);
+    transition-duration : 0.3s;
+    box-shadow          : 0 0 10px #555;
+    -moz-box-shadow     : 0 0 10px #555;
+    -webkit-box-shadow  : 0 0 10px #555;
+    -o-box-shadow       : 0 0 10px #555;
+}
+.dropify-render img {
+    width : 100%;
+}
+.dropify-preview span, .dropify-preview p {
+    font-family : "Open Sans", sans-serif !important;
+}
+.font-ccc {
+    color : #ccc;
+}
+.dropify-wrapper,
+.dropify-wrapper .dropify-clear {
+    font-family : "Open Sans", sans-serif, verdana;
+}
+.dropify-wrapper.has-error {
+    border-color : #fb8678;
+}
+.dropify-errors-container.visible {
+    background-color : #fb8678;
+}
+.dropify-wrapper .dropify-message .dropify-error {
+    color : #fb8678;
+}

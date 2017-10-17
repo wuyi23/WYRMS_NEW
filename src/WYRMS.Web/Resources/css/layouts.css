@@ -1,0 +1,66 @@
+
+.nav-fixed .rightsidebar-right .rightsidebar-right-content .rightsidebar-right-heading.rightsidebar-right-heading-first {
+    padding-top : 70px !important;
+}
+.full_img {
+    width : 100%;
+}
+@media screen and (max-width: 560px) {
+    body{
+        padding-top:0 !important;
+    }
+    .nav-fixed .right-side {
+        padding-top: 110px;
+    }
+}
+/*==== layout fixed ====*/
+.menu_align {
+    margin-bottom : 50px;
+}
+.navbar-fixed-top, .navbar-fixed-bottom {
+    position: fixed !important;
+}
+/*====End of layout fixed ====*/
+
+/*sticky footer layout*/
+.footer {
+    position         : fixed;
+    bottom           : 0;
+    width            : 82%;
+    height           : 46px;
+    background-color : #eee;
+    border-top       : 2px solid #ccc;
+    padding          : 13px 18px;
+    margin           : 0 -25px;
+}
+.footer-list {
+    float : right;
+}
+.footer-list li {
+    display : inline-block;
+}
+.footer-list li a {
+    color : #333;
+}
+.footer-list li a:focus, .footer-list li a:hover {
+    color : #7b7b7b;
+}
+@media screen and (max-width : 992px) {
+    .footer {
+        width : 100%;
+    }
+}
+@media screen and (min-width : 993px) {
+    .full-width {
+        width : 100%;
+    }
+    .footer-list li a {
+        padding : 0 5px;
+    }
+}
+@media (min-width : 993px) and (max-width : 1280px) {
+    .footer {
+        padding-right : 65px;
+    }
+}
+/*sticky footer layout ends*/

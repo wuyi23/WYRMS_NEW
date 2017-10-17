@@ -1,0 +1,62 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://html.alfisahr.com/nm_times/preview/ -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>我要拼机在线预览</title>
+    <link rel="stylesheet" type="text/css" href="~/Resources/vendors/webpreview/moblie_previewstyle.css">
+</head>
+<body>
+    <div class="theme-description">
+        <div class="title">
+            <h1>我要拼机</h1>
+            <div class="sub">Web页面编辑发布预览</div>
+        </div>
+        <h3 class="subtitle">预览尺寸</h3>
+        <select name="screensize">
+            <option value="1">4.4寸屏幕</option>
+            <option value="7" selected="">4.7寸屏幕"</option>
+            <option value="2">5.2寸屏幕"</option>
+            <option value="6">5.5寸屏幕"</option>
+            <option value="3">8.8寸屏幕"</option>
+            <option value="4">10.6寸屏幕"</option>
+            <!--<option value="5">Tablet 3 (Landscape)</option>-->
+        </select><br>
+        <br>
+        <!--
+        <input type="radio" name="screensize" value="1">320x480 - 4.4" - small smartphone<br>
+        <input type="radio" name="screensize" value="7">340x568 - 4.7" - medium smartphone<br>
+        <input type="radio" name="screensize" checked="checked" value="2">Default (375x550) - 5.2" - large smartphone<br>
+        <input type="radio" name="screensize" value="6">400x600 - 5.5 - Phablet<br>
+        <input type="radio" name="screensize" value="3">640x960 - 8.8"<br>
+        <input type="radio" name="screensize" value="4">768x641 - 10.6"<br>
+        <input type="radio" name="screensize" value="5">1024x641 - 14.2<br>-->
+    </div>
+    <div class="contenitore">
+        <div class="phone-container dark">
+            <div class="phone-shape small">
+                <div class="top-details">
+                    <span class="camera"></span>
+                    <span class="circle"></span>
+                    <span class="speaker"></span>
+                </div>
+                <div class="phone-screen">
+                    <iframe id="alf-preview" name="preview" src="@Url.Content(ViewBag.Action)" style="border:none" allowfullscreen></iframe>
+                </div>
+                <div class="circle-button"></div>
+            </div>
+        </div>
+
+
+        <div class="clr"></div>
+    </div>
+    <script src="~/Resources/vendors/webpreview/jquery-2.1.4.js"></script>
+    <script src="~/Resources/vendors/webpreview/moblie_preview.js"></script> <!-- Resource jQuery -->
+</body>
+</html>

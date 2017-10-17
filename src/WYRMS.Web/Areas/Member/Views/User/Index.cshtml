@@ -1,0 +1,291 @@
+﻿@using WYRMS.Domain.Model
+@{
+    List<SelectListItem> enableItems = ViewBag.EnableItems;
+    Permissions AddPermission = ViewBag.AddUserButton;
+    Permissions UpdatePermission = ViewBag.UpdateUserButton;
+    Permissions DeletePermission = ViewBag.DeleteUserButton;
+    Permissions ResetPwdPermission = ViewBag.ResetPwdUserButton;
+    Permissions SetGroupPermission = ViewBag.SetGroupUserButton;
+    Permissions SetRolesPermission = ViewBag.SetRolesUserButton;
+    Permissions ExportButton = ViewBag.ExportUserButton;
+
+}
+
+<section class="content-header">
+    <ol class="breadcrumb">
+        <li><i class="fa fa-dashboard"></i> 员工管理</li>
+
+    </ol>
+</section>
+
+<div class="row">
+    <div class="col-lg-12 col-sm-12">
+        <div class="panel panel-widget">
+            <div class="panel-heading">
+                <h3 class="panel-title">查询条件</h3>
+            </div>
+            <div class="panel-body">
+                <form id="userForm" class="form-horizontal">
+                    <div class="form-group" style="margin-top: 15px">
+                        <label class="control-label  col-sm-1" for="txt_search_username">用户名称</label>
+                        <div class=" col-sm-3">
+                            <input type="text" class="form-control" id="txt_search_username" name="userName">
+                        </div>
+                        <label class="control-label col-sm-1">是否激活</label>
+                        <div class=" col-sm-3">
+                            @Html.DropDownList("ddl_user_enable", enableItems, new { @class = "form-control", @Name = "enable" })
+                        </div>
+                        <div class="col-sm-4" >
+                            <button type="button" style="margin-top: 0px;" id="btn_query" class="btn btn-primary">查询</button>
+                            @if (ExportButton != null)
+                            {
+                                <button type="button" style="margin-top:0px;" id="btn_export" class="btn btn-primary">导出</button>
+                            }
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row" id="userSection">
+    <div class="col-lg-12 col-sm-12">
+        <div class="panel panel-widget">
+
+            <div class="panel-body">
+                <div id="toolbar" class="btn-group" role="group">
+                    @{
+                        if (AddPermission != null)
+                        {
+                            <button id="btn_add" type="button" class="btn btn-success">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>@AddPermission.Name
+                            </button>
+                        }
+                        if (UpdatePermission != null)
+                        {
+                            <button id="btn_edit" type="button" class="btn btn-warning">
+                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>@UpdatePermission.Name
+                            </button>
+                        }
+                        if (DeletePermission != null)
+                        {
+                            <button id="btn_delete" type="button" class="btn btn-danger">
+                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>@DeletePermission.Name
+                            </button>
+                        }
+                        if (ResetPwdPermission != null)
+                        {
+                            <button id="btn_reset" type="button" class="btn btn-info">
+                                <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>@ResetPwdPermission.Name
+                            </button>
+                        }
+                    }
+                </div>
+                <table id="tb_users"></table>
+            </div>
+        </div>
+    </div>
+
+</div>
+@*新的用法*@
+<div id="addUserDiv" class="modal fade animated" role="dialog"></div>
+
+@*旧的用法*@
+@*@Html.Partial("_ModalForm")*@
+
+
+@Html.Partial("_SettingModal")
+
+
+@section scripts{
+
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/Custom/TableOperation.js"></script>
+    <script src="~/Scripts/Custom/ModalForm.js"></script>
+    <script src="~/Scripts/Custom/User/User.js"></script>
+
+    <script>
+        $(function () {
+            //得到表格查询的参数
+            var dbQueryParams = function (params) {
+                var temp = {
+                    //这里的键的名字和控制器的变量名必须一致，这边改动，控制器也需要改成一样的
+                    limit: params.limit, //页面显示行数
+                    offset: params.offset, //页码*页面显示行数=offset
+                    userName: $("#txt_search_username").val(),
+                    enable: $("#ddl_user_enable").val()
+                };
+                return temp;
+            };
+            var actionUrl = "@Url.Action("GetUsers")";
+            var tbColumns = [
+                {
+                    checkbox: true
+                }, {
+                    title: '序号',
+                    align: 'center',
+                    formatter: function (value, row, index) {
+                        return m_pagerow + index + 1;
+                    }
+                }, {
+                    field: 'TrueName',
+                    title: '用户名称'
+                }, {
+                    field: 'Email',
+                    title: '邮箱'
+                },
+                {
+                    field: 'Phone',
+                    title: '电话'
+                },
+                {
+                    field: 'Address',
+                    title: '居住地址&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'
+                },
+                {
+                    field: 'StrUpdateDate',
+                    title: '更新时间'
+                }, {
+                    field: 'StrEnabled',
+                    title: '是否激活',
+                    align: 'center',
+                    cellStyle: function (value, row, index) {
+                        if (value === '否') {
+                            return {
+                                css: { "color": "red" }
+                            };
+                        } else {
+                            return {};
+                        }
+                    }
+                }, {
+                    field: 'operate',
+                    title: '&nbsp&nbsp&nbsp&nbsp设置&nbsp&nbsp&nbsp&nbsp',
+                    align: 'center',
+                    events: operateEvents,
+                    formatter: function (value, row, index) {
+                        var strSetgroup = "";
+                        var strSetrole = "";
+                        @{
+                            if (SetGroupPermission != null)
+                            {
+                                <text> strSetgroup = '<a class="setgroup" href="javascript:void(0)" Title="@SetGroupPermission.Name"><i class="glyphicon glyphicon-user"></i></a>'; </text>
+                            }
+                            if (SetRolesPermission != null)
+                            {
+                               <text> strSetrole = '&nbsp&nbsp<a class="setrole" href="javascript:void(0)" Title="@SetRolesPermission.Name"><i class="glyphicon glyphicon-cog"></i></a>'; </text>
+                            }
+                        }
+                        return strSetgroup + strSetrole;
+                    }
+                }
+            ];
+            //初始化表格
+            InitTable($("#tb_users"), actionUrl, dbQueryParams, tbColumns);
+        });
+        var $settingModal = $("#settingModal");
+        window.operateEvents = {
+            'click .setgroup': function (e, value, row, index) {
+                var actionUrl = "@Url.Action("SetUserGroups")";
+                var param = { id: row.Id };
+                ShowModal_Setting(actionUrl, param, "设置用户组", $settingModal);
+            },
+            'click .setrole': function (e, value, row, index) {
+                var actionUrl = "@Url.Action("SetRoles")";
+                var param = { id: row.Id };
+                ShowModal_Setting(actionUrl, param, "设置角色", $settingModal);
+            }
+        };
+
+        //查询用户
+        $("#btn_query", $userSection).click(function () {
+            var actionUrl = "@Url.Action("GetUsers")";
+            m_pagerow = 0;
+            $("#tb_users").bootstrapTable('refresh', { url: actionUrl });
+        });
+
+        //导出用户
+        $("#btn_export", $userSection).click(function () {
+            $("#userForm").attr("action", "@Url.Action("ExportUser")");
+            $("#userForm").attr("method", "Post");
+            $("#userForm").submit();
+        });
+
+
+        @*var $userSection = $("#userSection");
+        //新增用户
+        $("#btn_add", $userSection).click(function () {
+            var actionUrl = "@Url.Action("Create")";
+            var param = {};
+            ShowModal(actionUrl, param, "新增用户");
+        });
+        //编辑用户
+        $("#btn_edit", $userSection).click(function () {
+            var arrselections = $("#tb_users").bootstrapTable('getSelections');
+            if (arrselections.length > 1) {
+                toastr.warning('只能选择一行进行编辑');
+                return;
+            }
+            if (arrselections.length <= 0) {
+                toastr.warning('请选择有效数据');
+                return;
+            }
+            var actionUrl = "@Url.Action("Edit")";
+            var param = { id: arrselections[0].Id };
+            ShowModal(actionUrl, param, "编辑用户");
+        });*@
+
+        var $userSection = $("#userSection");
+        //新增用户
+        $("#btn_add", $userSection).click(function () {
+            var actionUrl = "@Url.Action("Create")";
+            var param = {};
+            ShowModalForm("#addUserDiv", actionUrl, param);
+        });
+
+        //编辑用户
+        $("#btn_edit", $userSection).click(function () {
+            var arrselections = $("#tb_users").bootstrapTable('getSelections');
+            if (arrselections.length > 1) {
+                toastr.warning('只能选择一行进行编辑');
+                return;
+            }
+            if (arrselections.length <= 0) {
+                toastr.warning('请选择有效数据');
+                return;
+            }
+            var actionUrl = "@Url.Action("Edit")";
+            var param = { id: arrselections[0].Id };
+            ShowModalForm("#addUserDiv", actionUrl, param);
+        });
+
+
+
+
+        //删除用户
+        $("#btn_delete", $userSection).click(function () {
+            var $tb = $("#tb_users");
+            var actionUrl = "@Url.Action("Delete")";
+            MultDelete($tb, actionUrl);
+        });
+        //重置用户登录密码
+        $("#btn_reset", $userSection).click(function () {
+            var $tb = $("#tb_users");
+            var actionUrl = "@Url.Action("ResetPassword")";
+            MultReset($tb, actionUrl);
+        });
+
+
+        //模态框中“设置角色”&&“设置用户组”保存
+        $("#btnSave", $settingModal).click(function () {
+            SaveModal_Setting($settingModal);
+        });
+
+    </script>
+}
+
+
+

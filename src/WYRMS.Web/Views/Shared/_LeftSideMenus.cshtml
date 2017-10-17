@@ -1,0 +1,50 @@
+﻿
+<section class="sidebar">
+    <div id="menu" role="navigation">
+        <div class="nav_profile">
+            <div class="media profile-left">
+                <a class="pull-left profile-thumb" href="javascript:void(0)" id="uploadMyImg">
+                    <script>
+                        var myimgHtml = window.localStorage.getItem("myimgHtml");
+                        window.document.write(myimgHtml);
+                    </script>
+                </a>
+                <div class="content-profile">
+                    <h4 class="media-heading">
+                        <script>
+                            var userNameHtml = window.localStorage.getItem("userNameHtml");
+                            window.document.write(userNameHtml); 
+                        </script>
+                    </h4>
+                    <ul class="icon-list">
+                      
+                        <li>
+                            <a href="javascript:void(0)" id="editPerson">
+                                <i class="fa fa-fw fa-gear"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Logout", "Login", new { Area="Common"})">
+                                <i class="fa fa-fw fa-sign-out"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="editPersonalPwdDiv" class="modal fade animated" role="dialog"></div>
+
+        <script>
+            var menuHtml = window.localStorage.getItem("menuHtml");
+            window.document.write(menuHtml);
+        </script>
+
+        <!-- / .navigation -->
+    </div>
+    <!-- menu -->
+
+    <div id="myImgModalDiv" class="modal fade animated" role="dialog">
+    </div>
+</section>
+
+

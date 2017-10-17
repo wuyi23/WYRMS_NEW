@@ -1,0 +1,14 @@
+#table1 th,
+#table1 td {
+    white-space : nowrap;
+}
+#table5_filter {
+    display : none;
+}
+.horizontal_table {
+    width : 100% !important;;
+}
+.dataTables_scrollHeadInner {
+    width     : 100% !important;
+    min-width : 1109px !important;
+}

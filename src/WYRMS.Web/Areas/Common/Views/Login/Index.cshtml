@@ -1,0 +1,128 @@
+﻿@model WYRMS.ViewModel.LoginVM
+@{
+    Layout = null;
+}
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WYRMS权限管理系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Resources/img/favicon.ico" />
+    <!-- Bootstrap -->
+    <!-- global css -->
+    <link href="/Resources/css/app.css" rel="stylesheet">
+    <!-- end of global css -->
+    <!--page level css -->
+    <link rel="stylesheet" href="/Resources/vendors/iCheck/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="/Resources/css/custom.css">
+    <link href="/Resources/vendors/hover/css/hover-min.css" rel="stylesheet">
+    <link href="/Resources/css/buttons_sass.css" rel="stylesheet">
+    <link href="/Resources/css/advbuttons.css" rel="stylesheet">
+    <link href="/Resources/css/login2.css" rel="stylesheet">
+    <link href="/Content/Site.css" rel="stylesheet" />
+    <link href="~/Scripts/Toastr/toastr.min.css" rel="stylesheet" />
+    <!--end page level css-->
+</head>
+
+<body class="bg-slider">
+    <div class="preloader">
+        <div class="loader_img"><img src="/Resources/img/loader.gif" alt="loading..." height="64" width="64"></div>
+    </div>
+    <div class="container">
+        <div class="row " id="form-login">
+            <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 login-content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="header">
+                            <h2 class="text-center">
+                                WYRMS权限管理系统
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-bg-color">
+                    <div class="col-md-12 core-login">
+
+                        <form id="loginform">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group ">
+                                        <label class="control-label" for="LoginName">用户名：</label>
+                                        <div class="input-group">
+                                            @Html.TextBoxFor(m => m.LoginName, new {@class = "form-control", @placeholder = "请输入您的用户名"})
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group ">
+                                        <label class="control-label" for="Password">密 码：</label>
+                                        <div class="input-group">
+                                            @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "请输入您的登录密码" })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <div class="form-group ">
+                                        <label class="control-label" for="Checkcode">手机验证码：</label>
+                                        <div class="input-group">
+                                            @Html.TextBoxFor(m => m.Checkcode, new { @class = "form-control", @placeholder = "请输入您收到的手机验证码" })
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <div class="form-group ">
+                                        <label class="control-label" for="sendbt"> &nbsp;</label>
+                                        <div class="input-group">
+                                            <input type="button" value="获取验证码" class="button button-pill button-royal-flat hvr-push pull-right" name="sendbt" id="sendbt" />
+                                            <button style="display: none;" id="J_resetCode" onclick="return false" class="button button-pill button-royal-flat hvr-push  pull-right hvr-grow" disabled="disabled">
+                                                <span id="J_second">60</span>秒后重发
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                               @* @Html.EditorFor(model => model.IsRememberLogin) 记住我 <input type="checkbox">*@<br/>
+                            </div>
+                        </form>
+                        <div class="form-group ">
+                            <div class="row">
+                                <div class="col-sm-4"><button id="doLogin" class="button button-pill button-royal-flat hvr-push pull-left hvr-grow" disabled="disabled">立即登录</button></div>
+                            </div>
+                            <br>
+                            <hr>
+                            <span> WUYI版权所有  &nbsp; ©Copyright 2017</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- global js -->
+    <script src="/Resources/js/jquery.min.js" type="text/javascript"></script>
+    <script src="/Resources/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/Resources/js/backstretch.js"></script>
+    <script src="/Scripts/Toastr/toastr.min.js"></script>
+    <script type="text/javascript">
+        toastr.options = { positionClass: "toast-top-center", showDuration: "150", hideDuration: "2000", showMethod: "fadeIn" };
+    </script>
+    <!-- end of global js -->
+    <!-- page level js -->
+    <script type="text/javascript" src="/Resources/vendors/iCheck/js/icheck.js"></script>
+
+    <script type="text/javascript" src="/Script/Login.js"></script>
+    <!-- end of page level js -->
+</body>
+
+</html>

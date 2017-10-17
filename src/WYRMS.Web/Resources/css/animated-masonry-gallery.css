@@ -1,0 +1,25 @@
+.m-b-10 {
+    margin-bottom: 10px;
+}
+
+#gallery-header-center-left-title {
+    float: left;
+    height: 35px;
+    font-size: 25px;
+    color: #428bca;
+    margin-left: 10px;
+}
+
+#gallery-content {
+    float: left;
+    width: 100%;
+}
+
+#gallery-content-center img {
+    width: 300px;
+    margin:0 0 10px 10px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}

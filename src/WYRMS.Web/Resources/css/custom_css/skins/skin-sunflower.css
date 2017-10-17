@@ -1,0 +1,189 @@
+.bg-sunflower {
+    background-color: #FFCE54;
+}
+
+.bg-sunflower-light {
+    background-color: #FFDD87;
+}
+
+.skin-sunflower .logo {
+    background-color: #FFCE54;
+    border-right: 1px solid #FFCE54;
+}
+
+.skin-sunflower .logo > h1 {
+    margin-top: 0;
+    font-size: 40px;
+    letter-spacing: 0.1em;
+    color: #fff;
+}
+
+.skin-sunflower .navbar {
+    background-color: #FFCE54;
+    /*  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); */
+}
+
+.skin-sunflower .nav_profile {
+    background-color: #313e4b;
+}
+
+.skin-sunflower .navbar .nav a {
+    color: #555;
+}
+
+.skin-sunflower .navbar .nav > li > a:hover,
+.skin-sunflower .navbar .nav > li > a:active,
+.skin-sunflower .navbar .nav > li > a:focus,
+.skin-sunflower .navbar .nav .open > a,
+.skin-sunflower .navbar .nav .open > a:hover,
+.skin-sunflower .navbar .nav .open > a:focus {
+    color: #555;
+}
+
+@media screen and (min-width: 550px) {
+    .skin-sunflower .navbar .navbar-right > .nav {
+        margin-right: 15px;
+    }
+}
+
+.skin-sunflower .navbar .sidebar-toggle .icon-bar {
+    background: #fff;
+}
+
+.skin-sunflower .sidebar .page-sidebar-menu > li {
+    border-bottom: 1px solid #fff;
+}
+
+.skin-sunflower .sidebar .page-sidebar-menu > li:hover {
+    background: #3a4252;
+    border-bottom: 1px solid rgba(54, 60, 70, 0.5);
+}
+
+.skin-sunflower .sidebar > .sidebar-menu > li > a {
+    margin-right: 1px;
+}
+
+.skin-sunflower .left-side {
+    background: #313e4b;
+}
+
+.skin-sunflower .sidebar a {
+    color: #808b9c;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+}
+
+.skin-sunflower .sidebar li.open a:hover {
+    background: #3a4252 !important;
+    text-decoration: none !important;
+}
+
+.skin-sunflower .sidebar li.open ul:hover,
+.skin-sunflower .sidebar li.open a ul:hover,
+.skin-sunflower .sidebar li.open ul li:hover,
+a,
+a:hover {
+    text-decoration: none !important;
+}
+
+.skin-sunflower .content-profile .icon-list li a {
+    border: 1px solid #2e333b;
+}
+
+.skin-sunflower .icon-list li a:hover {
+    background: #FFDD87;
+}
+
+.skin-sunflower .navbar-right .nav>li>a:hover {
+    background: #FFDD87;
+}
+
+.navbar-right .nav > li > a:hover, .navbar-right .nav > li > a:focus {
+    background-color: #FFDD87;
+    border-color: #FFDD87;
+}
+
+.skin-sunflower .sidebar-menu {
+    background: #313e4b;
+}
+
+.skin-sunflower .navbar-right .nav .open > a {
+    background-color: #FFDD87;
+    border-color: #FFDD87;
+}
+
+.skin-sunflower .navbar-nav > .user-menu > .dropdown-menu > li.user-header {
+    height: 140px;
+    padding: 6%;
+    background: #FFCE54;
+    text-align: center;
+}
+
+.skin-sunflower li.dropdown-title {
+    padding: 16px;
+    background: #FFDD87;
+    font-size: 14px;
+    color: #fff;
+}
+
+.skin-sunflower li.dropdown-footer {
+    padding: 16px;
+    background: #FFDD87;
+    border-bottom: 1px solid #ccc;
+    color: #fff;
+}
+
+.skin-sunflower #right {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+    right: -250px;
+}
+
+.skin-sunflower #right .rightsidebar-right-heading {
+    background: #FFDD87;
+}
+
+
+/* left side profile css */
+
+.skin-sunflower .nav_profile .profile-left {
+    padding: 15px;
+    min-height: 90px;
+}
+
+.skin-sunflower .nav_profile {
+    background-color: #313e4b;
+}
+
+.skin-sunflower .nav_profile .profile-left .profile-thumb {
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    display: inline-block;
+    padding-top: 9px;
+}
+
+.skin-sunflower .profile-left .profile-thumb {
+    border: 2px solid #313e4b;
+}
+
+.skin-sunflower .nav_profile .profile-left .media-heading {
+    line-height: 23px;
+    margin-top: 12px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+}
+
+.skin-sunflower .nav_profile .profile-left .profile-thumb img {
+    width: 54px;
+}
+
+.sidebar-right-opened #right {
+    right: 0;
+}
+.dropdown-menu > .dropdown-footer > a:hover, .dropdown-menu > .dropdown-footer > a:focus {
+    background-color: #FFDD87;
+}

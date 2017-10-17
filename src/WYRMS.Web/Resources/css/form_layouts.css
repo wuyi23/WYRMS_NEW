@@ -1,0 +1,68 @@
+.input-group-sm > .input-group-addon {
+    padding : 3px 10px;
+}
+.input-group-lg > .input-group-addon {
+    padding : 9px 16px;
+}
+.has-success .input-group-addon,
+.has-error .input-group-addon {
+    color : #fff;
+}
+.input-group-btn:last-child > .btn,
+.input-group-btn:last-child > .btn-group {
+    z-index : 0;
+}
+.form-bordered .form-group > div {
+    padding     : 15px;
+    border-left : 1px solid #efefef;
+}
+.form-bordered .form-group .p-t-24,
+.form-bordered-row .form-group .p-t-24 {
+    padding-top : 24px;
+}
+.form-bordered .form-group,
+.form-bordered-row .form-group{
+    margin        : 0;
+    border-bottom : 1px solid #efefef;
+}
+.form-bordered .control-label,
+.form-bordered-row .control-label{
+    padding-top   : 24px;
+    margin-bottom : 0;
+    text-align    : right;
+}
+.form-bordered-row .form-group > div {
+    padding : 15px;
+}
+.right_aligned button {
+    margin-left : 7px;
+}
+.has-success .input-group-addon,
+.has-error .input-group-addon {
+    color : #555;
+}
+.proc {
+    position : relative;
+    top      : -25px;
+    left     : 95%;
+}
+@media only screen and (max-width : 320px) {
+    .bttn_reset {
+        margin-top : 10px;
+    }
+}
+@media only screen and (max-width : 768px) {
+    .form-bordered .form-group > div {
+        border : none;
+    }
+}
+@media only screen and (max-width : 425px) {
+    .proc {
+        position : relative;
+        top      : -25px;
+        left     : 91%;
+    }
+}
+.m-t-ng-10 {
+    margin-top : -10px;
+}

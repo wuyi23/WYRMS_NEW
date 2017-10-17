@@ -1,0 +1,406 @@
+/* flatbuttons */
+
+li {
+    list-style : none;
+}
+.flatbuttons {
+    padding-left : 4%;
+}
+.flatbuttons ul {
+    padding : 20px;
+}
+.flatbuttons ul li {
+    width      : 150px;
+    float      : left;
+    padding    : 5px;
+    list-style : none;
+}
+.flatbuttons div {
+    clear          : both;
+    padding-top    : 15px;
+    padding-bottom : 0;
+}
+.btn-rounded .button {
+    padding : 0 18px;
+}
+.flatbuttons .icon-btn {
+    padding : 0 29px;
+}
+/* flatbuttons for small width. */
+
+.flatbuttons_small ul li {
+    width   : 138px;
+    float   : left;
+    padding : 10px 20px 20px 0;
+}
+/*quick icons*/
+
+.panel-body .btn:not(.btn-block) {
+    margin-bottom : 10px;
+}
+/*Group buttons panel*/
+
+.ui-group-buttons .or {
+    position  : relative;
+    float     : left;
+    width     : .3em;
+    height    : 1.3em;
+    z-index   : 3;
+    font-size : 12px
+}
+.ui-group-buttons .or:before {
+    position           : absolute;
+    top                : 50%;
+    left               : 50%;
+    content            : 'or';
+    background-color   : #5a5a5a;
+    margin-top         : -.1em;
+    margin-left        : -.9em;
+    width              : 1.8em;
+    height             : 1.8em;
+    line-height        : 1.55;
+    color              : #fff;
+    font-style         : normal;
+    font-weight        : 400;
+    text-align         : center;
+    border-radius      : 500px;
+    -webkit-box-shadow : 0 0 0 1px rgba(0, 0, 0, 0.1);
+    box-shadow         : 0 0 0 1px rgba(0, 0, 0, 0.1);
+    -webkit-box-sizing : border-box;
+    -moz-box-sizing    : border-box;
+    box-sizing         : border-box
+}
+.ui-group-buttons .or:after {
+    position         : absolute;
+    top              : 0;
+    left             : 0;
+    content          : ' ';
+    width            : .3em;
+    height           : 2.84em;
+    background-color : rgba(0, 0, 0, 0);
+    border-top       : .6em solid #5a5a5a;
+    border-bottom    : .6em solid #5a5a5a
+}
+.ui-group-buttons .or.or-lg {
+    height    : 1.3em;
+    font-size : 16px
+}
+.ui-group-buttons .or.or-lg:after {
+    height : 2.85em
+}
+.ui-group-buttons .or.or-sm {
+    height : 1em
+}
+.ui-group-buttons .or.or-sm:after {
+    height : 2.5em
+}
+.ui-group-buttons .or.or-xs {
+    height : .25em
+}
+.ui-group-buttons .or.or-xs:after {
+    height  : 1.84em;
+    z-index : -1000
+}
+.ui-group-buttons {
+    display        : inline-block;
+    vertical-align : middle
+}
+.ui-group-buttons:after {
+    content    : ".";
+    display    : block;
+    height     : 0;
+    clear      : both;
+    visibility : hidden
+}
+.ui-group-buttons .btn {
+    float         : left;
+    border-radius : 0
+}
+.ui-group-buttons .btn:first-child {
+    margin-left               : 0;
+    border-top-left-radius    : .25em;
+    border-bottom-left-radius : .25em;
+    padding-right             : 15px
+}
+.ui-group-buttons .btn:last-child {
+    border-top-right-radius    : .25em;
+    border-bottom-right-radius : .25em;
+    padding-left               : 15px
+}
+/*Group buttons panel ens here*/
+
+/*Buttons With Labels*/
+
+.btn-label {
+    position   : relative;
+    left       : -12px;
+    display    : inline-block;
+    padding    : 6px 15px;
+    background : rgba(0, 0, 0, 0.15);
+    /*border-radius: 3px 0 0 3px;*/
+}
+.btn-label.label-right {
+    left : 13px;
+}
+.btn-labeled {
+    padding-top    : 0;
+    padding-bottom : 0;
+}
+.button-3d.button-primary, .button-3d.button-primary:hover, .button-3d.button-primary:focus,
+.button-3d.button-action, .button-3d.button-action:hover, .button-3d.button-action:focus,
+.button-3d.button-highlight, .button-3d.button-highlight:hover, .button-3d.button-highlight:focus,
+.button-3d.button-caution, .button-3d.button-caution:hover, .button-3d.button-caution:focus,
+.button-3d.button-royal, .button-3d.button-royal:hover, .button-3d.button-royal:focus{
+    box-shadow : 0 7px 0 #bbbbbb, 0 8px 3px rgba(0, 0, 0, 0.2);
+}
+.button-circle {
+    width  : 115px;
+    height : 115px;
+}
+/*outline buttons*/
+
+.flatbuttons button {
+    margin-top : 20px;
+}
+.btn-up:before {
+    left                : 11%;
+    top                 : 373px;
+    margin-left         : -8px;
+    border-bottom-color : #428bca;
+}
+.btn-direction:before {
+    position    : absolute;
+    line-height : 0;
+    content     : '';
+    border      : 8px solid transparent;
+}
+.btn-primary.btn-up:before {
+    border-bottom-color : #428BCA;
+}
+.btn-warning.btn-right:focus:before,
+.btn-warning.btn-right:hover:before {
+    border-left-color : #FFB65F;
+}
+.btn-warning.btn-right:before {
+    border-left-color : #FFB65F;
+}
+.btn-right:before {
+    top               : 56%;
+    left              : 33%;
+    margin-top        : -8px;
+    border-left-color : #e4eaec;
+}
+.btn-success.btn-bottom:before {
+    border-top-color : #22D69D;
+}
+.btn-bottom:before {
+    bottom           : 39.1%;
+    left             : 47%;
+    margin-left      : -8px;
+    border-top-color : #22D69D;
+}
+.btn-danger.btn-left:before {
+    border-right-color : #FB8678;
+}
+.btn-left:before {
+    top                : 56%;
+    left               : 58.8%;
+    margin-top         : -8px;
+    border-right-color : #FB8678;
+}
+/*animate button*/
+
+.btn-animate-side:hover span > .icon {
+    opacity : 1;
+}
+.btn-animate-side span > .icon {
+    position           : absolute;
+    top                : 91%;
+    left               : 90px;
+    display            : block;
+    opacity            : 0;
+    -webkit-transition : opacity .2s ease-out 0s;
+    -o-transition      : opacity .2s ease-out 0s;
+    transition         : opacity .2s ease-out 0s;
+    -webkit-transform  : translate(-20px, -50%);
+    -ms-transform      : translate(-20px, -50%);
+    -o-transform       : translate(-20px, -50%);
+    transform          : translate(-20px, -50%);
+}
+.btn-animate-vertical:hover span > .icon {
+    opacity : 1;
+}
+.btn-animate-vertical span > .icon {
+    position          : absolute;
+    top               : inherit;
+    left              : 33%;
+    display           : block;
+    font-size         : 24px;
+    -webkit-transform : translate(-50%, -100%);
+    -ms-transform     : translate(-50%, -100%);
+    -o-transform      : translate(-50%, -100%);
+    transform         : translate(-50%, -100%);
+}
+.btn .icon {
+    width       : 1em;
+    margin      : -1px 3px 0;
+    line-height : inherit;
+    text-align  : center;
+}
+.btn-animate span {
+    display : block;
+    width   : 100%;
+    height  : 100%;
+}
+.btn-animate-side span:hover {
+    -webkit-transition : -webkit-transform .2s ease-out 0s;
+    -o-transition      : -o-transform .2s ease-out 0s;
+    transition         : transform .2s ease-out 0s;
+}
+.btn-animate-side:hover {
+    padding : 8px 28px;
+}
+/* vertical animation code*/
+
+.btn-animate-vertical span {
+    -webkit-transition : all .2s ease-out 0s;
+    -o-transition      : all .2s ease-out 0s;
+    transition         : all .2s ease-out 0s;
+}
+.btn-animate-vertical:focus,
+.btn-animate-vertical:active,
+.btn-animate-vertical:hover {
+    outline : none;
+}
+.btn-animate-vertical span > .icon {
+    opacity           : 0;
+    position          : absolute;
+    top               : -2px;
+    left              : 50%;
+    display           : block;
+    font-size         : 24px;
+    -webkit-transform : translate(-50%, -100%);
+    -ms-transform     : translate(-50%, -100%);
+    -o-transform      : translate(-50%, -100%);
+    transform         : translate(-50%, -100%);
+}
+.btn-animate-vertical:hover span {
+    -webkit-transform : translate(0, 150%);
+    -ms-transform     : translate(0, 150%);
+    -o-transform      : translate(0, 150%);
+    transform         : translate(0, 150%)
+}
+.btn-animate-vertical.btn-xs span > .icon {
+    top       : -5px;
+    font-size : 18px
+}
+.btn-animate-vertical.btn-sm span > .icon {
+    top       : -3px;
+    font-size : 21px
+}
+.btn-animate-vertical.btn-lg span > .icon {
+    font-size : 37px
+}
+/*side animation code*/
+
+.btn-animate-side {
+    padding : 8px 28px
+}
+.btn-animate-side span {
+    -webkit-transition : -webkit-transform .2s ease-out 0s;
+    -o-transition      : -o-transform .2s ease-out 0s;
+    transition         : transform .2s ease-out 0s
+}
+.btn-animate-side span > .icon {
+    position           : absolute;
+    top                : 50%;
+    left               : 0;
+    display            : block;
+    opacity            : 0;
+    -webkit-transition : opacity .2s ease-out 0s;
+    -o-transition      : opacity .2s ease-out 0s;
+    transition         : opacity .2s ease-out 0s;
+    -webkit-transform  : translate(-20px, -50%);
+    -ms-transform      : translate(-20px, -50%);
+    -o-transform       : translate(-20px, -50%);
+    transform          : translate(-20px, -50%)
+}
+.btn-animate-side:hover span {
+    -webkit-transform : translate(10px, 0);
+    -ms-transform     : translate(10px, 0);
+    -o-transform      : translate(10px, 0);
+    transform         : translate(10px, 0)
+}
+.btn-animate-side:hover span > .icon {
+    opacity : 1
+}
+.btn-animate-side.btn-xs {
+    padding : 3px 14px
+}
+.btn-animate-side.btn-xs span > .icon {
+    left : 5px
+}
+.btn-animate-side.btn-xs:hover span {
+    -webkit-transform : translate(8px, 0);
+    -ms-transform     : translate(8px, 0);
+    -o-transform      : translate(8px, 0);
+    transform         : translate(8px, 0)
+}
+.btn-animate-side.btn-sm {
+    padding : 6px 22px
+}
+.btn-animate-side.btn-sm span > .icon {
+    left : 3px
+}
+.btn-animate-side.btn-sm:hover span {
+    -webkit-transform : translate(8px, 0);
+    -ms-transform     : translate(8px, 0);
+    -o-transform      : translate(8px, 0);
+    transform         : translate(8px, 0)
+}
+.btn-animate-side.btn-lg {
+    padding : 10px 33px
+}
+.btn-animate-side.btn-lg span > .icon {
+    left : -6px
+}
+.btn-animate-side.btn-lg:hover span {
+    -webkit-transform : translate(14px, 0);
+    -ms-transform     : translate(14px, 0);
+    -o-transform      : translate(14px, 0);
+    transform         : translate(14px, 0)
+}
+.btn-floating {
+    width              : 56px;
+    height             : 56px;
+    padding            : 0;
+    margin             : 0;
+    font-size          : 24px;
+    text-align         : center;
+    border-radius      : 100%;
+    -webkit-box-shadow : 0 6px 10px rgba(0, 0, 0, .15);
+    box-shadow         : 0 6px 10px rgba(0, 0, 0, .15);
+}
+.btn-floating.btn-sm {
+    width     : 40px;
+    height    : 40px;
+    padding   : 0;
+    font-size : 15px;
+}
+/*contract overlay button size*/
+
+.ladda-button[data-style=contract-overlay] {
+    width : 140px;
+}
+.pad_left {
+    padding-left : 40px;
+}
+.flatbuttons div {
+    padding-top : 10px;
+}
+.m-r-50 {
+    margin-right : 50px;
+}
+.btn-group.drop_btn {
+    padding-top : 0;
+}

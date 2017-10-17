@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="globalwings_crmModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Modules">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ParentId" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="LinkUrl" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IsMenu" Type="bit" Nullable="false" />
+          <Property Name="Code" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="Enabled" Type="bit" Nullable="false" />
+          <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+          <Property Name="Icon" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="PermissionRoles">
+          <Key>
+            <PropertyRef Name="Permission_Id" />
+            <PropertyRef Name="Role_Id" />
+          </Key>
+          <Property Name="Permission_Id" Type="int" Nullable="false" />
+          <Property Name="Role_Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Permissions">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="Enabled" Type="bit" Nullable="false" />
+          <Property Name="ModuleId" Type="int" Nullable="false" />
+          <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoleName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="Enabled" Type="bit" Nullable="false" />
+          <Property Name="OrderSort" Type="int" Nullable="false" />
+          <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RoleUsers">
+          <Key>
+            <PropertyRef Name="Role_Id" />
+            <PropertyRef Name="User_Id" />
+          </Key>
+          <Property Name="Role_Id" Type="int" Nullable="false" />
+          <Property Name="User_Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserGroupRoles">
+          <Key>
+            <PropertyRef Name="UserGroup_Id" />
+            <PropertyRef Name="Role_Id" />
+          </Key>
+          <Property Name="UserGroup_Id" Type="int" Nullable="false" />
+          <Property Name="Role_Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserGroups">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GroupName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="OrderSort" Type="int" Nullable="false" />
+          <Property Name="Enabled" Type="bit" Nullable="false" />
+          <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserGroupUsers">
+          <Key>
+            <PropertyRef Name="UserGroup_Id" />
+            <PropertyRef Name="User_Id" />
+          </Key>
+          <Property Name="UserGroup_Id" Type="int" Nullable="false" />
+          <Property Name="User_Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="300" />
+          <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+          <Property Name="TrueName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Enabled" Type="bit" Nullable="false" />
+          <Property Name="ImgUrl" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <Association Name="FK_dbo_Modules_dbo_Modules_ParentId">
+          <End Role="Modules" Type="Self.Modules" Multiplicity="0..1" />
+          <End Role="Modules1" Type="Self.Modules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Modules">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Modules1">
+              <PropertyRef Name="ParentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="globalwings_crmModelStoreContainer">
+          <EntitySet Name="Modules" EntityType="Self.Modules" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PermissionRoles" EntityType="Self.PermissionRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Permissions" EntityType="Self.Permissions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RoleUsers" EntityType="Self.RoleUsers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserGroupRoles" EntityType="Self.UserGroupRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserGroups" EntityType="Self.UserGroups" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserGroupUsers" EntityType="Self.UserGroupUsers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_dbo_Modules_dbo_Modules_ParentId" Association="Self.FK_dbo_Modules_dbo_Modules_ParentId">
+            <End Role="Modules" EntitySet="Modules" />
+            <End Role="Modules1" EntitySet="Modules" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="globalwings_crmModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="SysEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Modules" EntityType="globalwings_crmModel.Modules" />
+          <EntitySet Name="PermissionRoles" EntityType="globalwings_crmModel.PermissionRoles" />
+          <EntitySet Name="Permissions" EntityType="globalwings_crmModel.Permissions" />
+          <EntitySet Name="Roles" EntityType="globalwings_crmModel.Roles" />
+          <EntitySet Name="RoleUsers" EntityType="globalwings_crmModel.RoleUsers" />
+          <EntitySet Name="UserGroupRoles" EntityType="globalwings_crmModel.UserGroupRoles" />
+          <EntitySet Name="UserGroups" EntityType="globalwings_crmModel.UserGroups" />
+          <EntitySet Name="UserGroupUsers" EntityType="globalwings_crmModel.UserGroupUsers" />
+          <EntitySet Name="Users" EntityType="globalwings_crmModel.Users" />
+          <AssociationSet Name="FK_dbo_Modules_dbo_Modules_ParentId" Association="globalwings_crmModel.FK_dbo_Modules_dbo_Modules_ParentId">
+            <End Role="Modules" EntitySet="Modules" />
+            <End Role="Modules1" EntitySet="Modules" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Modules">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ParentId" Type="Int32" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="LinkUrl" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsMenu" Type="Boolean" Nullable="false" />
+          <Property Name="Code" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Enabled" Type="Boolean" Nullable="false" />
+          <Property Name="UpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Modules1" Relationship="globalwings_crmModel.FK_dbo_Modules_dbo_Modules_ParentId" FromRole="Modules" ToRole="Modules1" />
+          <NavigationProperty Name="Modules2" Relationship="globalwings_crmModel.FK_dbo_Modules_dbo_Modules_ParentId" FromRole="Modules1" ToRole="Modules" />
+          <Property Name="Icon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="PermissionRoles">
+          <Key>
+            <PropertyRef Name="Permission_Id" />
+            <PropertyRef Name="Role_Id" />
+          </Key>
+          <Property Name="Permission_Id" Type="Int32" Nullable="false" />
+          <Property Name="Role_Id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Permissions">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Enabled" Type="Boolean" Nullable="false" />
+          <Property Name="ModuleId" Type="Int32" Nullable="false" />
+          <Property Name="UpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Enabled" Type="Boolean" Nullable="false" />
+          <Property Name="OrderSort" Type="Int32" Nullable="false" />
+          <Property Name="UpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="RoleUsers">
+          <Key>
+            <PropertyRef Name="Role_Id" />
+            <PropertyRef Name="User_Id" />
+          </Key>
+          <Property Name="Role_Id" Type="Int32" Nullable="false" />
+          <Property Name="User_Id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserGroupRoles">
+          <Key>
+            <PropertyRef Name="UserGroup_Id" />
+            <PropertyRef Name="Role_Id" />
+          </Key>
+          <Property Name="UserGroup_Id" Type="Int32" Nullable="false" />
+          <Property Name="Role_Id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserGroups">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GroupName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="OrderSort" Type="Int32" Nullable="false" />
+          <Property Name="Enabled" Type="Boolean" Nullable="false" />
+          <Property Name="UpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="UserGroupUsers">
+          <Key>
+            <PropertyRef Name="UserGroup_Id" />
+            <PropertyRef Name="User_Id" />
+          </Key>
+          <Property Name="UserGroup_Id" Type="Int32" Nullable="false" />
+          <Property Name="User_Id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="UpdateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TrueName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Enabled" Type="Boolean" Nullable="false" />
+          <Property Name="ImgUrl" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_dbo_Modules_dbo_Modules_ParentId">
+          <End Type="globalwings_crmModel.Modules" Role="Modules" Multiplicity="0..1" />
+          <End Type="globalwings_crmModel.Modules" Role="Modules1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Modules">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Modules1">
+              <PropertyRef Name="ParentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="globalwings_crmModelStoreContainer" CdmEntityContainer="SysEntities">
+          <EntitySetMapping Name="Modules">
+            <EntityTypeMapping TypeName="globalwings_crmModel.Modules">
+              <MappingFragment StoreEntitySet="Modules">
+                <ScalarProperty Name="Icon" ColumnName="Icon" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="IsMenu" ColumnName="IsMenu" />
+                <ScalarProperty Name="LinkUrl" ColumnName="LinkUrl" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PermissionRoles">
+            <EntityTypeMapping TypeName="globalwings_crmModel.PermissionRoles">
+              <MappingFragment StoreEntitySet="PermissionRoles">
+                <ScalarProperty Name="Role_Id" ColumnName="Role_Id" />
+                <ScalarProperty Name="Permission_Id" ColumnName="Permission_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Permissions">
+            <EntityTypeMapping TypeName="globalwings_crmModel.Permissions">
+              <MappingFragment StoreEntitySet="Permissions">
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="ModuleId" ColumnName="ModuleId" />
+                <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="globalwings_crmModel.Roles">
+              <MappingFragment StoreEntitySet="Roles">
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="OrderSort" ColumnName="OrderSort" />
+                <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RoleUsers">
+            <EntityTypeMapping TypeName="globalwings_crmModel.RoleUsers">
+              <MappingFragment StoreEntitySet="RoleUsers">
+                <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+                <ScalarProperty Name="Role_Id" ColumnName="Role_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserGroupRoles">
+            <EntityTypeMapping TypeName="globalwings_crmModel.UserGroupRoles">
+              <MappingFragment StoreEntitySet="UserGroupRoles">
+                <ScalarProperty Name="Role_Id" ColumnName="Role_Id" />
+                <ScalarProperty Name="UserGroup_Id" ColumnName="UserGroup_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserGroups">
+            <EntityTypeMapping TypeName="globalwings_crmModel.UserGroups">
+              <MappingFragment StoreEntitySet="UserGroups">
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+                <ScalarProperty Name="OrderSort" ColumnName="OrderSort" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserGroupUsers">
+            <EntityTypeMapping TypeName="globalwings_crmModel.UserGroupUsers">
+              <MappingFragment StoreEntitySet="UserGroupUsers">
+                <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+                <ScalarProperty Name="UserGroup_Id" ColumnName="UserGroup_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="globalwings_crmModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="ImgUrl" ColumnName="ImgUrl" />
+                <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+                <ScalarProperty Name="TrueName" ColumnName="TrueName" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

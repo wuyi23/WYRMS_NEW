@@ -1,0 +1,77 @@
+#RGB {
+	height: 20px;
+	background: rgb(128, 128, 128);
+}
+#RC .slider-selection {
+	background: #FF8282;
+}
+#RC .slider-handle {
+	background: red;
+}
+#GC .slider-selection {
+	background: #6cc66c;
+}
+#GC .slider-handle {
+	background: #6cc66c;
+}
+#BC .slider-selection {
+	background: #418bca;
+}
+#BC .slider-handle {
+	border-bottom-color: #418bca;
+}
+#R, #G, #B {
+	width: 300px;
+}
+#ex1Slider .slider-selection {
+	background: #f56954;
+}
+#ex1Slider .slider-handle {
+	background: #cf304b;
+}
+#ex2 .slider-selection {
+	background: #418bca;
+}
+#ex2 .slider-handle {
+	background: #418bca;
+}
+#ex4 .slider-selection {
+	background: #EF6F6C;
+}
+#ex4 .slider-handle {
+	background: #EF6F6C;
+}
+#ex5 .slider-selection {
+	background: #EF6F6C;
+}
+#ex5 .slider-handle {
+	background: #EF6F6C;
+}
+#ex6 .slider-selection {
+	background: #6cc66c;
+}
+#ex6 .slider-handle {
+	background: #6cc66c;
+}
+#ex7 .slider-selection {
+	background: #418bca;
+}
+#ex7 .slider-handle {
+	background: #418bca;
+}
+#ex8 .slider-selection {
+	background: #aaaaaa;
+}
+#ex8 .slider-handle {
+	background: #aaa;
+}
+#ex9 .slider-selection {
+	background: #f89a14;
+}
+#ex9 .slider-handle {
+	background: #f89a14;
+}
+label {
+;
+font-weight:lighter;
+}

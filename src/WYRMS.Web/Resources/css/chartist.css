@@ -1,0 +1,29 @@
+.ct-series-a .ct-line,
+.ct-series-a .ct-point {
+    stroke : #ffb65f;
+}
+.ct-series-b .ct-line,
+.ct-series-b .ct-point {
+    stroke : #4fc1e9;
+}
+.ct-series-c .ct-line,
+.ct-series-c .ct-point {
+    stroke : #22d69d;
+}
+.ct-series-d .ct-line,
+.ct-series-d .ct-point {
+    stroke : #fb8678;
+}
+.ct-series-a .ct-bar {
+    /* Colour of your bars */
+    stroke : #ff865f;
+}
+.ct-series-b .ct-bar {
+    /* Colour of your bars */
+    stroke : #4fc1e9;
+}
+@media screen and (max-width : 425px) {
+    .panel-heading .clickable {
+        display : none;
+    }
+}

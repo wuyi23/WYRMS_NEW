@@ -1,0 +1,28 @@
+.nsg-tag {
+    border-color     : #428BCA;
+    background-color : #428BCA;
+}
+.input {
+    background-color : #eeeeee;
+    color            : #FFF;
+    padding          : 10px;
+}
+input {
+    outline          : none;
+    background-color : #eeeeee;
+    color            : #428BCA;
+    border           : 0;
+    padding          : 3px;
+    margin           : 5px 0;
+}
+.nsg-tag-remove:after {
+    background-color : #428BCA;
+}
+label.tag1 {
+    margin-top    : 15px;
+    margin-bottom : 15px;
+}
+.m-t-b-15 {
+    margin-top    : 15px;
+    margin-bottom : 15px;
+}

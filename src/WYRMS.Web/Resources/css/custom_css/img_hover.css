@@ -1,0 +1,14 @@
+[class^='imghvr-'],
+[class*=' imghvr-'] {
+    background-color: #22D69D;
+    height: 200px;
+}
+[class*=' imghvr-'] figcaption,
+[class^=imghvr-] figcaption {
+    background-color: #428BCA;
+    height: 200px;
+}
+[class*=' imghvr-'] img,
+[class^=imghvr-] img {
+    height: 200px;
+}

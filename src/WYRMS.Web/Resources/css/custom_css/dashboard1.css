@@ -1,0 +1,691 @@
+/*global changes css*/
+.left-side {
+    width : 240px;
+}
+.sidebar {
+    width : 240px;
+}
+.right-side {
+    margin-left      : 240px;
+    background-color : #eee;
+}
+@media screen and (min-width : 992px) {
+
+    /*Right side strech mode*/
+    .right-side.strech {
+        margin-left : 0;
+    }
+    /* Left side collapse */
+    .left-side.collapse-left {
+        left : -240px;
+    }
+}
+/*Give content full width on xs screens*/
+
+@media screen and (max-width : 992px) {
+    .right-side {
+        margin-left : 0;
+    }
+    .row-offcanvas-left {
+        left : 240px;
+    }
+    .row-offcanvas-left .sidebar-offcanvas {
+        left : -240px;
+    }
+}
+/*page level*/
+body > .header .navbar .sidebar-toggle {
+    margin-left : 0;
+}
+.panel {
+    border-radius : 5px;
+}
+.panel-white {
+    color : #fff;
+}
+.tiles-row .tile-bottom {
+    margin-bottom : 21px;
+}
+.widget .item {
+    margin         : 0;
+    border-spacing : 0;
+    border         : 0;
+    width          : 38%;
+    float          : left;
+    padding        : 3px 0;
+}
+/*sales visits and income widgets*/
+
+.canvas-interactive-wrapper1, .canvas-interactive-wrapper2,
+.canvas-interactive-wrapper3, .canvas-interactive-wrapper4 {
+    position : relative;
+}
+.canvas-interactive-wrapper1 canvas, .canvas-interactive-wrapper2 canvas,
+.canvas-interactive-wrapper3 canvas, .canvas-interactive-wrapper4 canvas {
+    position      : absolute;
+    display       : block;
+    top           : 0;
+    bottom        : 0;
+    border-radius : 5px;
+    height        : 135px;
+    width         : 100%;
+}
+.canvas-interactive-wrapper1 .cta-wrapper1, .canvas-interactive-wrapper2 .cta-wrapper2,
+.canvas-interactive-wrapper3 .cta-wrapper3, .canvas-interactive-wrapper4 .cta-wrapper4 {
+    position        : relative;
+    display         : inline-block;
+    border          : solid 1px transparent;
+    z-index         : 1;
+    text-decoration : none;
+    color           : #222;
+    transition      : border .3s;
+    width           : 100%;
+}
+.widget-count {
+    width         : 62%;
+    float         : left;
+    padding       : 9px 0;
+    border-radius : 0 5px 5px 0;
+}
+@media (max-width : 1200px) {
+    .tile-bottom {
+        margin-bottom : 15px;
+    }
+    .widget-count {
+        padding : 16px 0;
+    }
+}
+.progress-bar-white {
+    background-color : #86c653;
+}
+.item-under {
+    padding : 15px 34px;
+    color   : #000;
+
+}
+.item-icon {
+    width : 1%;
+}
+.icon-color {
+    background-color : #F5F5F5;
+}
+.widget-icon {
+    display          : inline-block;
+    line-height      : 77px;
+    text-align       : center;
+    font-size        : 36px;
+    color            : #fff;
+    border-radius    : 38px;
+    width            : 75px;
+    height           : 75px;
+    margin           : 23px 15px;
+    background-color : rgba(255, 255, 255, .4);
+}
+.progress-item {
+    margin : 20px 21px 0 76px;
+}
+.fa-size {
+    font-size : 43px;
+}
+.count-box {
+    font-size : 3em;
+}
+.item-label {
+    margin-bottom : 6px;
+}
+.item-label .title {
+    font-size   : 16px;
+    font-weight : 600;
+}
+.content-header .header-section {
+    padding-left  : 21px;
+    padding-right : 21px;
+}
+.content-header h1 {
+    font-size   : 38px;
+    line-height : 1.5;
+}
+.index-header {
+    margin     : -10px;
+    text-align : center;
+    color      : #fff;
+    height     : 160px;
+}
+.inner-bg {
+    padding : 31px 0;
+}
+.sec-mar {
+    margin-top : 30px;
+}
+h2 small {
+    color : #fff;
+}
+/*tab1*/
+
+.stat-chart {
+    padding : 19px;
+}
+#chart6 svg {
+    height : 300px;
+}
+#home .text-muted {
+    color : #555;
+}
+#chart6 svg .nv-groups .nv-group {
+    fill-opacity : 0.1 !important;
+}
+.nvd3 .nv-axis .nv-axisMaxMin text {
+    font-weight : 400;
+    color       : #ccc !important;
+}
+.nvd3 text {
+    font : 400 12px open sans;
+    fill : #696969;
+}
+/*progressbar*/
+
+.progress-stats {
+    height : 8px;
+}
+/*panel tabs css start */
+.panel-padding {
+    padding : 4px;
+}
+.tabbable-custom > .nav-tabs {
+    border : 0;
+    margin : 0;
+    top    : 0;
+}
+.bg-info {
+    background-color : #48CFAD;
+    color            : #ebf4e4;
+}
+.bg-success {
+    background-color : #A0D468;
+    color            : #ebf4e4;
+}
+.bg-primary {
+    color            : #fff;
+    background-color : #4FC1E9;
+}
+.bg-warning {
+    background-color : #FFCE54;
+}
+.bg-danger {
+    background-color : #FD9883;
+}
+.panel-default1 {
+    border-color : #fff;
+}
+.panel-default1 > .panel-heading {
+    color            : #333;
+    background-color : #fff;
+    border-color     : #ddd;
+}
+.panel-default1 > .panel-heading + .panel-collapse .panel-body {
+    border-top-color : #ddd;
+}
+.panel-gradient {
+    color      : #fff;
+    background : #5D9CEC;
+}
+.panel-gradient {
+    color      : #fff;
+    background : #5D9CEC;
+}
+.table > thead > tr > th {
+    vertical-align : bottom;
+    border-bottom  : 2px solid #ededed;
+}
+.label {
+    font-weight : 100;
+}
+.bottom-pad {
+    margin-bottom : 6px;
+}
+.flotLegend {
+    margin-bottom : 10px;
+}
+.flotChart {
+    width    : 100%;
+    height   : 250px;
+    position : relative;
+}
+.list-statistics {
+    margin-bottom : 0;
+}
+.list-statistics .list-group-item {
+    height      : 55px;
+    line-height : 50px;
+}
+.list-group-item:first-child {
+    border-top-left-radius  : 4px;
+    border-top-right-radius : 4px;
+}
+.progress.progress-sm {
+    height     : 5px;
+    margin-top : 5px;
+}
+.nav-float > li > a {
+    position : relative;
+    display  : block;
+    padding  : 6px 18px;
+}
+#basicFlotLegend .legendLabel {
+    padding-left  : 4px;
+    padding-right : 6px;
+}
+#basicFlotLegend1 .legendLabel {
+    padding-left  : 4px;
+    padding-right : 6px;
+}
+.nav-tabs > li {
+    float         : left;
+    margin-bottom : 0;
+}
+#placeholder {
+    margin-left : 2%;
+}
+#placeholder .flot-text .flot-x-axis {
+    left : -4px !important;
+}
+#placeholder .flot-text .flot-y-axis {
+    top  : -7px !important;
+    left : -13px !important;
+}
+#donut .pieLabel div {
+    font-size : 12px !important;
+}
+#donut #pieLabel4 div {
+    padding-top : 1px !important;
+}
+#donut #pieLabel2 div, #donut #pieLabel1 div {
+    padding-left : 24px !important;
+}
+#donut #pieLabel3 div {
+    padding-top : 16px !important;
+}
+.nav-tabs {
+    border-bottom : 1px solid #fff;
+    margin-top    : -20px;
+}
+/*tabs css ends*/
+
+/*server*/
+
+.server-load {
+    padding-top : 5px;
+}
+.server-stat {
+    width : 33.33%;
+}
+.server-stat p {
+    font-size   : 16px;
+    font-weight : 600;
+}
+.server-stat span {
+    color : #777;
+}
+.server-buttons {
+    margin-top : 30px;
+}
+.server-cache, .server-reset {
+    width         : 94%;
+    border-radius : 3px;
+
+}
+.server-reset {
+    margin-left : 6%;
+}
+/*chart*/
+#flotchart2 {
+    width      : 100%;
+    height     : 123px;
+    margin-top : 75px;
+}
+@media screen and (max-width : 992px) {
+    #flotchart2 {
+        height : 200px;
+    }
+}
+/*server ends*/
+
+/*revenue bar chart*/
+.revenue-panel {
+    height : 360px;
+}
+@media screen and (max-width : 992px) {
+    .revenue-panel {
+        height : 429px;
+    }
+}
+#revenue-chart {
+    height : 270px;
+}
+.ct-series-a .ct-bar {
+    stroke : #428bca;
+}
+.ct-series-b .ct-bar {
+    stroke : #4FC1E9;
+}
+.panel-widget .revenue {
+    padding : 2px 15px;
+
+}
+.revenue .rev-divider {
+    border-right : 1px solid #efefef;
+}
+.ct-perfect-fourth1 > svg {
+    top  : 10px;
+    left : 23px;
+}
+.ct-perfect-fourth1 {
+    height : 250px;
+}
+/*grid*/
+.ct-grid {
+    stroke-dasharray : 1px;
+
+}
+@media screen and (max-width : 992px) {
+    #revenue-chart {
+        height : 338px;
+    }
+    .ct-perfect-fourth1 {
+        height     : 286px;
+        margin-top : 18px;
+    }
+}
+/*tasks to do*/
+
+.checkbox .striked {
+    left : 17px;
+}
+.checkbox-info {
+
+}
+.todotext {
+    margin : 10px 0 0 20px;
+}
+.todolist_list {
+    border-bottom : 1px solid #efefef;
+    display       : inline-block;
+    width         : 100%;
+}
+.todolist_list:last-child {
+    border-bottom : 0;
+}
+.todolist_list {
+    min-height : 42px;
+}
+.todolist_list .showbtns {
+    opacity : 0;
+}
+.todolist_list:hover .showbtns {
+    opacity : 1;
+}
+#todoedit {
+    color         : #418bca;
+    padding-right : 3px;
+}
+.todoedit,
+.todoedit:hover {
+    color           : #418bca;
+}
+#tododelete {
+    color        : #F00;
+    padding-left : 3px;
+}
+.tododelete,
+.tododelete:hover {
+    color           : #F00;
+}
+.strikethrough {
+    text-decoration : line-through;
+    color           : #ca0002;
+}
+.todoitemcheck {
+    float        : left;
+    margin-left  : 5px;
+    margin-right : 8px;
+}
+.btn.save_todo {
+    display : none;
+}
+.editinglist {
+    background-color : #efefef;
+}
+.custom_textbox1, .todoitembtns {
+    min-height : 44px;
+}
+.todoitembtns {
+    padding : 11px;
+}
+.todolist_list #custom_textbox, .todolist_list .add_button, .todolist_list .save_todo {
+    border-radius : 3px;
+}
+.form-inline .form-group {
+    width : 63%;
+}
+.form-inline #custom_textbox {
+    width : 95%;
+}
+/*tasks ends*/
+
+/*projects status*/
+.graph {
+    height : 280px;
+}
+#hero-bar svg rect {
+    width : 36px;
+    fill  : #428bca;
+}
+.chart_leftpad {
+    padding-left : 9%;
+}
+/*projects status ends*/
+
+/*browser interest*/
+
+.basic-list img {
+    height       : 24px;
+    margin-right : 12px;
+}
+.basic-list {
+    padding       : 0 17px;
+    margin-bottom : 0;
+}
+.basic-list li {
+    display       : block;
+    position      : relative;
+    border-bottom : 1px solid rgba(0, 0, 0, 0.06);
+    padding       : 11px 0;
+}
+.basic-list li:last-child {
+    border-bottom : 0;
+}
+.basic-list li:last-child img {
+    margin : 0 16px 0 7px;
+}
+.basic-list .right {
+    display     : inline-block;
+    padding     : 3px 6px;
+    font-weight : 600;
+    margin-top  : 4px;
+}
+.panel-widget .panel-heading {
+    border-bottom : 1px solid #ddd;
+}
+/*browser interest ends*/
+
+/*sociaL widgets*/
+
+.social-tiles .google {
+    background    : #D54B3D;
+    border-radius : 5px 0 0 0;
+}
+.social-tiles .google .overlay {
+    border-radius : 5px 0 0 0;
+}
+.social-tiles .facebook {
+    background    : #3C5A98;
+    border-radius : 0 5px 0 0;
+}
+.social-tiles .facebook .overlay {
+    border-radius : 0 5px 0 0;
+}
+.social-tiles .twitter {
+    background : #1B9AE7;
+}
+.social-tiles .linkedin {
+    background : #0077B5;
+}
+.social-tiles .youtube {
+    background    : #E32C28;
+    border-radius : 0 0 0 5px;
+}
+.social-tiles .youtube .overlay {
+    border-radius : 0 0 0 5px;
+}
+.social-tiles .dribbble {
+    background    : #EA4C89;
+    border-radius : 0 0 5px 0;
+}
+.social-tiles .dribbble .overlay {
+    border-radius : 0 0 5px 0;
+}
+.social-widgets {
+    margin-bottom : 20px;
+}
+.social-tiles .social {
+    min-height : 118px;
+    width      : 50%;
+    float      : left;
+}
+.social-tiles .social i {
+    color     : #fff;
+    font-size : 40px;
+    padding   : 14px 0 0 17px;
+}
+/*overlay css*/
+.social-tiles .social {
+    position : relative;
+    display  : block;
+}
+.social .visible-cont {
+    margin : 45px 20px 0 0;
+    color  : #fff;
+}
+.visible-cont span {
+    font-size : 32px;
+}
+.social-tiles span.overlay {
+    visibility         : hidden;
+    transition         : all .5s linear;
+    -o-transition      : all .5s linear;
+    -moz-transition    : all .5s linear;
+    -webkit-transition : all .5s linear;
+    position           : absolute;
+    background         : rgba(0, 0, 0, 0.6);
+    left               : 0;
+    width              : 100%;
+    height             : 100%;
+    opacity            : 0;
+    bottom             : 0;
+    color              : #fff;
+    padding-top        : 10px;
+}
+.social-tiles .social:hover span.overlay {
+    visibility : visible;
+    opacity    : 1;
+}
+.social-tiles .social span.overlay span {
+    font-size : 50px;
+}
+@media screen and (max-width : 346px) {
+    .social-tiles .social span.overlay span {
+        font-size : 43px;
+    }
+    .social-tiles .social:hover span.overlay {
+        padding-top : 29px;
+    }
+}
+@media (max-width : 567px) {
+    .social-tiles .social i {
+        padding : 14px 55px 0 11px;
+    }
+    .social-tiles .social {
+        height : 143px;
+    }
+    .social .visible-cont {
+        margin : 18px 20px 0 0;
+    }
+}
+@media (max-width : 1199px) {
+    .social-tiles .social {
+        max-height : 150px;
+        width      : 33.33%;
+        float      : left;
+    }
+    .social-tiles .facebook, .social-tiles .facebook .overlay {
+        border-radius : 0;
+    }
+    .social-tiles .twitter, .social-tiles .twitter .overlay {
+        border-radius : 0 5px 0 0;
+    }
+    .social-tiles .linkedin, .social-tiles .linkedin .overlay {
+        border-radius : 0 0 0 5px;
+    }
+    .social-tiles .youtube, .social-tiles .youtube .overlay {
+        border-radius : 0;
+    }
+}
+/*world map*/
+#world-map-markers {
+    width  : 100%;
+    height : 300px;
+}
+.jvectormap-zoomin,
+.jvectormap-zoomout {
+    padding : 4px 13px 13px 5px;
+    left    : 95%;
+}
+@media (max-width : 425px) {
+    .jvectormap-zoomin,
+    .jvectormap-zoomout {
+        left : 93%;
+    }
+}
+.zero-padding {
+    padding : 0;
+}
+.stat-details {
+    padding    : 0;
+    background : #313e4b;
+    color      : #fff;
+    min-height : 300px;
+}
+.stat-head {
+    padding : 6px 30px 0 25px;
+}
+.stat-icon {
+    font-size     : 18px;
+    padding-right : 8px;
+}
+.maps-row {
+    padding-bottom : 15px;
+}
+@media (max-width : 324px) {
+    .task_panel {
+        margin-top : 20px;
+    }
+}
+@media screen and (max-width : 480px) {
+    .content-header .header-section {
+        padding-left  : 23px;
+        padding-right : 23px;
+    }
+    .content-header .header-section h2 {
+        font-size : 24px;
+    }
+}

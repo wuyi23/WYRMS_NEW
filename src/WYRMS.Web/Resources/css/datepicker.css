@@ -1,0 +1,9 @@
+.daterangepicker.opensleft:after {
+    display: none;
+}
+.date-picker-wrapper {
+    z-index: 20000;
+}
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background-color: #fff;
+}

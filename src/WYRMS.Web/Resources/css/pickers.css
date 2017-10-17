@@ -1,0 +1,12 @@
+#example28 + .btn-group > .multiselect {
+    min-width : 65px;
+}
+.input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group,
+.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group {
+    border-radius : 0 ;
+}
+@media only screen and (min-width : 769px ) and (max-width : 1440px ) {
+    #example28-values {
+        margin-top : 10px;
+    }
+}

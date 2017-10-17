@@ -1,0 +1,53 @@
+﻿@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>消息推送页面</title>
+    <script src="~/Scripts/jquery-1.8.2.min.js"></script>
+    <script src="~/Scripts/jquery.signalR-2.2.1.min.js"></script>
+    <script src="~/signalr/hubs"></script>
+</head>
+<body>
+    <input type="text" id="txtMess" />
+    <input type="button" value="发送广播消息" id="btnPush" />
+
+    <script>
+        (function () {
+
+            //发送信息
+            $("#btnPush").click(function () {
+                var $mess = $("#txtMess");
+                $.ajax({
+                    url: "../Socket/fnBroadcast",
+                    data: { ordertype: $mess.val(), user_id: 630, user_token: "1af21362-6606-4b04-9a2b-ba1c23e90216" },
+                    type: "post",
+                    dataType: "text",
+                    success: function (result) {
+                        if (result.indexOf("成功") !== -1) {
+                            $mess.val("");
+                        }
+                        else {
+                            alert(result);
+                        }
+                    }
+                });
+            });
+
+            //接收信息
+            var allHub = $.connection.allHub;//对应后台的 类 AllHub
+            allHub.client.notice = function (msg) {
+                $("body").append("<br/><br/>" + msg);
+            }
+
+            $.connection.hub.start();
+
+        })();
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,96 @@
+﻿
+
+
+
+<link type="text/css" rel="stylesheet" href="~/Resources/vendors/hover/css/hover-min.css">
+<link rel="stylesheet" type="text/css" href="~/Resources/vendors/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="~/Resources/vendors/dropify/css/dropify.css">
+<link rel="stylesheet" type="text/css" href="~/Resources/css/custom_css/advanced_modals.css">
+
+
+<div class="modal-dialog modal-sm">
+    <div class="modal-content">
+        <div class="modal-header">
+            @*<button type="button" class="close" id="smallclosebt">&times;</button>
+            <h4 class="modal-title">头像上传</h4>*@
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">头像上传</h4>
+        </div>
+        <div class="modal-body">
+            <form id="myImgForm" action="http://images.globalwings.com/api/Upload" enctype="multipart/form-data" method="POST">
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="file" id="Filedata" name="Filedata" class="dropify" />
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" id="uploadCancle">
+                取消
+            </button>
+            <button type="button" class="btn btn-primary" id="uploadComfirm">
+                上传
+            </button>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="~/Resources/js/jquery.form.js"></script>
+<script type="text/javascript" src="~/Resources/vendors/dropify/js/dropify.js"></script>
+<script type="text/javascript" src="~/Resources/js/custom_js/advanced_modals.js"></script>
+<script>
+    $(function () {
+
+        $('.dropify').dropify({
+            messages: {
+                'default': '点击或拖拽文件到这里',
+                'replace': '点击或拖拽文件到这里来替换文件',
+                'remove': '移除文件',
+                'error': '对不起，你上传的文件太大了',
+            }
+        });
+
+        $("#uploadCancle").on("click", function () {
+
+            $("#myImgModalDiv").modal('hide');
+
+        });
+
+        $("#uploadComfirm").on("click", function () {
+            console.log($(this));
+            $("#myImgForm").ajaxSubmit({
+                type: 'POST',
+                enctype: 'multipart/form-data',
+                dataType: 'JSON',
+                url: 'http://images.globalwings.com/api/Upload',
+                success: function (data) {
+                    var myImgUrl = "http://images.globalwings.com" + data.SaveName;
+                    $.ajax({
+                        type: "POST",
+                        url: "@Url.Action("UploadMyImg")",
+                        data: { url: myImgUrl },
+                        success: function (result) {
+                            if (result.Success) {
+                                toastr.success(result.Message);
+                                $("#myImgModalDiv").modal('hide');
+                                $("#myImg").attr("src", myImgUrl);
+                                var myimgHtml = " <img src='" + myImgUrl + "' id='myImg' class='img-circle' alt='User Image'>";
+                                window.localStorage.setItem("myimgHtml", myimgHtml);
+                            }
+                            else {
+                                toastr.error(result.Message);
+                            }
+                        },
+                        error: function () {
+                            toastr.error('网络错误，请重新提交！');
+                        }
+                    });
+                },
+                error: function (XmlHttpRequest, textStatus, errorThrown) {
+                    toastr.error('上传图片失败！');
+                }
+            });
+        });
+    });
+</script>

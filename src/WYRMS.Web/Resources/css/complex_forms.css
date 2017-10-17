@@ -1,0 +1,16 @@
+legend {
+    margin-bottom : 0;
+}
+.grid-form [data-row-span] [data-field-span] label:first-child {
+    font-size      : small;
+    letter-spacing : 0.5px;
+}
+.grid-form [data-row-span] [data-field-span]:hover,
+.grid-form [data-row-span] [data-field-span].focus {
+    background-color : #fff;
+}
+.select2-container {
+    vertical-align : middle;
+    border         : 1px solid #ccc;
+    border-radius  : 2px;
+}

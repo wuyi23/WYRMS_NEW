@@ -1,0 +1,116 @@
+#cal-slide-content a.event-item {
+    color : #4fc1e9;
+}
+#cal-slide-content,
+#cal-slide-content:hover {
+    background-color : #000;
+    box-shadow       : none;
+}
+#eventlist li a:hover {
+    background-color : #ccc;
+}
+#cal-week-box {
+    margin-left   : 70px;
+    border        : 1px solid #dcdcdc;
+    color         : #333;
+    border-radius : 0;
+    text-align    : center;
+}
+.date-picker-wrapper.no-shortcuts {
+    z-index : 2000;
+}
+.input-group {
+    width : 100%;
+}
+.event {
+    box-shadow : none;
+    border     : none;
+}
+.events-list {
+    max-height : 56px;
+}
+.event-important {
+    background-color : #fb8678;
+}
+a.text-danger:hover,
+a.text-danger:focus {
+    color : #fc7070;
+}
+.event-default {
+    background-color : #dcdcdc;
+}
+a.text-default:hover,
+a.text-default:focus {
+    color : #dbd4d4;
+}
+.event-success {
+    background-color : #22d69d;
+}
+a.text-success:hover,
+a.text-success:focus {
+    color : #41d981;
+}
+.event-info {
+    background-color : #4fc1e9;
+}
+a.text-info:hover,
+a.text-info:focus {
+    color : #48bae2;
+}
+.event-warning {
+    background-color : #ffb65f;
+}
+a.text-warning:hover,
+a.text-warning:focus {
+    color : #fe9f37;
+}
+.event-primary {
+    background-color : #428bca;
+}
+a.text-primary:hover,
+a.text-primary:focus {
+    color : #509de0;
+}
+.event-default {
+    background-color : #ccc;
+}
+a.text-default {
+    color : #aaa;
+}
+[class*="cal-cell"]:hover {
+    background-color : #dcdcdc;
+}
+a.text-default:hover,
+a.text-default:focus {
+    color : #333;
+}
+.m-t-25 {
+    margin-top : 25px;
+}
+.m-b-25 {
+    margin-bottom : 25px;
+}
+.page-header {
+    padding-bottom : 15px;
+}
+.badge1 {
+    background-color : #fb8678;
+}
+.day-highlight.dh-event-primary:hover,
+.day-highlight.dh-event-primary {
+    background-color : #a4c7e5;
+}
+.delete_event {
+    padding : 0 10px;
+}
+@media screen and (max-width : 320px) {
+    .cal-month-box .cal-day-today span[data-cal-date] {
+        font-size : 1.6em;
+    }
+}
+@media screen and (max-width : 500px) {
+    #cal-week-box {
+        padding : 0 5px;
+        z-index : 99;
+    }
+}

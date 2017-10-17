@@ -1,0 +1,53 @@
+legend {
+    margin-bottom: 0;
+}
+
+.grid-form [data-row-span] [data-field-span] label:first-child {
+    font-size: small;
+    text-transform: none;
+    letter-spacing: 0.5px;
+}
+
+.grid-form [data-row-span] [data-field-span]:hover,
+.grid-form [data-row-span] [data-field-span].focus {
+    background-color: #fff;
+}
+
+.grid-form textarea ,.grid-form input[type="text"]{
+    border:1px solid #ccc;
+    border-radius: 2px;
+}
+
+.select2-container {
+    vertical-align: middle;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+.grid-form input[type="text"]
+{
+    font-size:14px;
+     padding:6px 12px;
+}
+.iradio > .iradio_square-blue{
+    display:block;
+    margin:4px;
+}
+.grid-form [data-row-span] > .telephone {
+    border-bottom:none;
+}
+.grid-form fieldset legend {
+    border: none;
+    border-bottom: 2px solid #333;
+    color: #333;
+    font-size: 16px;
+}
+.grid-form [data-row-span="4"] > [data-field-span="1"] > [data-col-span="1"] {
+    margin-top:11px;
+}
+@media only screen and (min-width: 700px) {
+    .grid-form [data-row-span="4"] > [data-field-span="4"] {
+        border-right:0;
+        display: block;
+    }
+}

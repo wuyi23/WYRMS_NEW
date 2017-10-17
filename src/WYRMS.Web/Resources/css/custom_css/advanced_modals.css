@@ -1,0 +1,77 @@
+#color_modal .modal-header {
+    border-radius: 6px 6px 0 0;
+}
+
+.input-group {
+    width: 100%;
+}
+
+button {
+    margin-top: 10px;
+}
+
+.modal-content {
+    border: none;
+}
+
+.position_modal .modal-dialog {
+    position: fixed;
+}
+#top_modal .modal-dialog {
+    top: 0;
+    margin: 0 0 0 50%;
+    transform: translateX(-50%);
+}
+
+#center_modal .modal-dialog {
+    top: 50%;
+    margin: 0 0 0 50%;
+    transform: translate(-50%, -50%);
+}
+
+#bottom_modal .modal-dialog {
+    bottom: 0;
+    margin: 0 0 0 50%;
+    transform: translateX(-50%);
+}
+
+@media screen and (max-width:768px) {
+    #top_modal .modal-dialog,
+    #center_modal .modal-dialog,
+    #bottom_modal .modal-dialog {
+        width: 100%;
+    }
+}
+
+#sidebar_modal .modal-dialog {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: auto;
+    margin: 0;
+    width: 270px;
+}
+
+#sidebar_modal .modal-content {
+    height: 100%;
+    padding-top: 40%;
+}
+
+#grid_modal .row {
+    border: 1px solid #dcdcdc;
+    padding: 3px;
+    margin-top: 2px;
+}
+
+#grid_modal .modal-body {
+    padding: 25px;
+}
+
+.panel-title > a {
+    display: block;
+}
+
+#fill_modal .modal-backdrop {
+    opacity: 1;
+}

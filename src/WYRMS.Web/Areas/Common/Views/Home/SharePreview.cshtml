@@ -1,0 +1,41 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html >
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no, width=device-width">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Resources/css/mobile.css" rel="stylesheet"/>
+
+</head>
+<body>
+<div style="margin-bottom: 60px;">
+    <section id="content">
+        <div class="box" id="webview_content_wrapper">
+            @Html.Raw(ViewBag.Content)
+        </div>
+    </section>
+
+</div>
+ <div class="floating">
+            <div class="background"></div>
+            <div class="layer-view">
+                <div class="layer-icon"><img src="/Resources/img/icon.png" /></div>
+                <div class="layer-content">
+                    <div class="app-name">我要拼机</div>
+                    <div class="app-desc">让公务飞行也享受互联网共享经济的变革。</div>
+                </div>
+                <div class="layer-btn">
+                    <a class="btn" href="http://a.app.qq.com/o/simple.jsp?pkgname=com.aviation.mobile">阅读更多</a>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

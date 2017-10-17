@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6a27b3d39bcb49f9995a542e2f11c6a2" Name="关系图1">
+        <EntityTypeShape EntityType="globalwings_crmModel.Modules" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="globalwings_crmModel.PermissionRoles" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="globalwings_crmModel.Permissions" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="globalwings_crmModel.Roles" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="globalwings_crmModel.RoleUsers" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="globalwings_crmModel.UserGroupRoles" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="globalwings_crmModel.UserGroups" Width="1.5" PointX="6.75" PointY="3.75" />
+        <EntityTypeShape EntityType="globalwings_crmModel.UserGroupUsers" Width="1.5" PointX="4.75" PointY="6.75" />
+        <EntityTypeShape EntityType="globalwings_crmModel.Users" Width="1.5" PointX="6.75" PointY="6.75" />
+        <AssociationConnector Association="globalwings_crmModel.FK_dbo_Modules_dbo_Modules_ParentId" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,129 @@
+
+.toast-success {
+    background-color : #22d69d;
+}
+.toast-info {
+    background-color : #4fc1e9;
+}
+.toast-error {
+    background-color : #fb8678;
+}
+.toast-warning {
+    background-color : #ffb65f;
+}
+.text-info.message {
+    margin-bottom : 20px;
+}
+/* buttons xs responsive*/
+
+@media only screen and (max-width : 480px) {
+    .toastrshow {
+        margin-top : 10px;
+    }
+}
+/*notification.html*/
+
+.notify_page .btn {
+    margin-top : 20px;
+}
+textarea {
+    resize : vertical;
+}
+/*outline buttons*/
+
+.btn-outline-default,
+.btn-outline-default:hover,
+.btn-outline-default:focus {
+    background-color : rgba(220, 220, 220, .1);
+    border           : 1px solid #dcdcdc;
+    color            : #dcdcdc;
+    border-radius    : 2px;
+}
+.btn-outline-primary,
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+    background-color : rgba(66, 139, 202, .1);
+    border           : 1px solid #428bca;
+    color            : #428bca;
+    border-radius    : 2px;
+}
+.ui-pnotify .alert-primary {
+    background-color : rgba(66, 139, 202, .9);
+    border           : 1px solid #0069C4;
+}
+.btn-outline-success,
+.btn-outline-success:hover,
+.btn-outline-success:focus {
+    background-color : rgba(34, 214, 157, .1);
+    border           : 1px solid #22d69d;
+    color            : #22d69d;
+    border-radius    : 2px;
+}
+.ui-pnotify .alert-success {
+    background-color : rgba(34, 214, 157, .9);
+    border           : 1px solid #1EC28F;
+}
+.btn-outline-info,
+.btn-outline-info:hover,
+.btn-outline-info:focus {
+    background-color : rgba(79, 193, 233, .1);
+    border           : 1px solid #4fc1e9;
+    color            : #4fc1e9;
+    border-radius    : 2px;
+}
+.ui-pnotify .alert-info {
+    background-color : rgba(79, 193, 233, .9);
+    border           : 1px solid #159DCD;
+}
+.btn-outline-danger,
+.btn-outline-danger:hover,
+.btn-outline-danger:focus {
+    background-color : rgba(251, 134, 120, .1);
+    border           : 1px solid #fb8678;
+    color            : #fb8678;
+    border-radius    : 2px;
+}
+.ui-pnotify .alert-danger {
+    background-color : rgba(251, 134, 120, .9);
+    border           : 1px solid #E76859;
+}
+.btn-outline-warning,
+.btn-outline-warning:hover,
+.btn-outline-warning:focus {
+    background-color : rgba(255, 182, 95, .1);
+    border           : 1px solid #ffb65f;
+    color            : #ffb65f;
+    border-radius    : 2px;
+}
+.ui-pnotify .alert-warning {
+    background-color : rgba(255, 182, 95, .9);
+    border           : 1px solid #FFA73F;
+}
+.btn {
+    color : #333;
+}
+.source {
+    width : 88%;
+}
+.notif-types {
+    margin         : 0;
+    border         : 1px solid #eee;
+    padding-bottom : 19px;
+    border-radius  : 2px;
+    margin-bottom  : 18px;
+}
+.m-t-30 {
+    margin-top : 30px;
+}
+.m-t-35 {
+    margin-top : 35px;
+}
+.ui-pnotify.translucent.ui-pnotify-fade-in {
+    opacity : .8;
+}
+/* Notification Responsive */
+@media only screen and (max-width : 767px) {
+    body > .ui-pnotify {
+        top    : 60px !important;
+    }
+}

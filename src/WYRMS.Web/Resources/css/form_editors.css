@@ -1,0 +1,93 @@
+.editor-clr {
+    color : #fff;
+}
+.editor-cls {
+    width       : 100%;
+    height      : 200px;
+    font-size   : 14px;
+    line-height : 18px;
+    border      : 1px solid #dddddd;
+    padding     : 10px;
+}
+.pd-15 {
+    padding : 0 15px;
+}
+/*summer note */
+
+.note-editor.fullscreen {
+    margin : 0;
+}
+.note-editor {
+    margin : 20px;
+}
+.note-editable {
+    height : 300px;
+    width  : 100%;
+}
+.well {
+    margin-bottom : 0;
+}
+.panel-default > .panel-heading {
+    border-color     : #a9b6bc;
+    background-color : #EBEBEB;
+}
+.panel_bgcolor {
+    background-color : #F5F5F5;
+}
+.flip_editing {
+    background-color : #F5F5F5;
+}
+.summer_noted {
+    margin : -20px;
+}
+.trumbowyg-modal-box .trumbowyg-modal-button.trumbowyg-modal-reset:hover {
+    background : #e6e6e6;
+}
+.trumbowyg-modal-box .trumbowyg-modal-button.trumbowyg-modal-submit {
+    background : #01bc8c;
+}
+.trumbowyg-modal-box .trumbowyg-modal-button.trumbowyg-modal-submit:hover {
+    background-color : #01BC8C;
+}
+.trumbowyg-box {
+    background-color : #fff;
+}
+ul {
+    list-style-type : disc;
+}
+.modal .text-muted {
+    color : #333;
+}
+/*whysihtml*/
+
+/*summer note color picker dropdown rensponsive*/
+
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+    position : relative;
+    margin   : 4px 5px;
+}
+@media screen and (max-width : 700px) {
+    .panel-heading.note-toolbar .note-color .dropdown-menu {
+        min-width : 180px;
+        left      : -123px;
+    }
+}
+@media screen and (max-width : 402px) {
+    .panel-heading.note-toolbar .note-color .dropdown-menu {
+        left : 0;
+    }
+}
+@media screen and (max-width : 345px) {
+    .panel-heading.note-toolbar .note-color .dropdown-menu {
+        left : -59px;
+    }
+}
+.panel-heading.note-toolbar .note-para .dropdown-menu {
+    min-width : 152px;
+}
+@media screen and (max-width : 400px) {
+    .trumbowyg-dropdown {
+        left : 50px !important;
+    }
+}

@@ -1,0 +1,22 @@
+#external-events {
+float: left;
+width: 200px;
+padding: 0 5px;
+text-align: left;
+}
+#external-events h4 { font-size: 16px; margin-top: 0; padding-top: 1em; }
+.external-event { /* try to mimick the look of a real event */
+margin: 10px 0;
+padding:6px;
+background: #48CFAD;
+color: #fff;
+border-radius:5px;
+font-size: .85em;
+cursor: pointer;
+}
+#external-events p {margin: 1.5em 0; font-size: 11px; color: #666; }
+#external-events p input { margin: 0; vertical-align: middle; }
+
+.fc-event{
+background: #48CFAD;
+}

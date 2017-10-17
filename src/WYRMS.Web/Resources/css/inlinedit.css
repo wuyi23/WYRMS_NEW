@@ -1,0 +1,76 @@
+#comments:hover {
+    background-color: #FFFFC0;
+    cursor: text;
+}
+
+table.table > tbody > tr > td {
+    height: 30px;
+    vertical-align: middle;
+}
+
+#frm select {
+    width: auto;
+}
+
+#enable {
+    margin-left: 25px;
+}
+#user > tbody > tr > td {
+    height: 45px;
+    padding: 4px 8px;
+}
+
+.muted {
+    color: #999999;
+}
+
+.notready {
+    color: #999999;
+    font-style: italic;
+}
+
+.editable-address {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.editable-address span {
+    width: 70px;
+    display: inline-block;
+}
+
+.buttons {
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.btns {
+    padding-top: 15px;
+    margin: 0;
+}
+
+.txt-align {
+    text-align: right;
+}
+
+.enable-btn {
+    margin-right: 10px;
+    margin-bottom: 8px;
+}
+
+.table_simple {
+    width: 35%;
+}
+
+.table_superuser {
+    width: 65%;
+}
+
+.m-l-10 {
+    margin-left: 10px;
+}
+.m-t-14 {
+    margin-top: 14px;
+}

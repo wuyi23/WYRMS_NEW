@@ -1,0 +1,12 @@
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    border-bottom-left-radius : 5px;
+    border-top-left-radius    : 5px;
+}
+.btn-group > .btn:last-child:not(:first-child),
+.btn-group > .dropdown-toggle:not(:first-child) {
+    border-bottom-right-radius : 5px;
+    border-top-right-radius    : 5px;
+}
+#example {
+    width : 100%;
+}

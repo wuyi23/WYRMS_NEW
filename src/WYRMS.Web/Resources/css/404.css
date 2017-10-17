@@ -1,0 +1,81 @@
+/*404 and 500 pages css*/
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:600,400);
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    padding: 110px 0;
+}
+
+.robot:hover {
+    -webkit-filter: hue-rotate(174deg) saturate(0.7);
+    filter: hue-rotate(174deg) saturate(0.7);
+}
+
+.server_img:hover {
+    -webkit-filter: hue-rotate(174deg) saturate(0.7);
+    filter: hue-rotate(174deg) saturate(0.7);
+}
+
+.server_img img {
+    width: 350px;
+}
+
+.error_type {
+    font-size: 110px;
+    color: #428bca;
+    font-weight: 600;
+    text-shadow: 4px 5px 10px #9d9d9d;
+}
+
+.error {
+    color: #fb8678;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: -14px;
+}
+
+.error_msg {
+    font-size: 18px;
+}
+
+.seperator {
+    width: 65%;
+}
+@media screen and (max-width: 600px){
+    .robot img {
+        width: 220px;
+    }
+
+    .server_img img {
+        width: 260px;
+    }
+    .error_type {
+        font-size: 83px;
+    }
+}
+@media screen and (max-width: 767px){
+    body {
+        padding: 14px 0;
+    }
+}
+/*======preloader=====*/
+.preloader{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:100000;
+    backface-visibility: hidden;
+    background: #ffffff;
+}
+.loader_img{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-position: center;
+    margin:-25px 0 0 -25px;
+}
