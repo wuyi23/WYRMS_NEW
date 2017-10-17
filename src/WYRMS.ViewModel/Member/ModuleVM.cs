@@ -30,7 +30,7 @@ namespace WYRMS.ViewModel.Member
 
         [Required(ErrorMessage = "模块图标不能为空")]
         [Display(Name = "模块图标")]
-        [StringLength(20)]
+        [StringLength(50)]
         public string Icon { get; set; }
 
 
