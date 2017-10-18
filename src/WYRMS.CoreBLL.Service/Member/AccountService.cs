@@ -66,7 +66,7 @@ namespace WYRMS.CoreBLL.Service.Member
                 {"myimg", GetMyImgHtml(user.ImgUrl)}
             };
 
-            return new OperationResult(OperationResultType.Success, "登录成功", "", data); ;
+            return new OperationResult(OperationResultType.Success, "登录成功", data); ;
         }
 
         /// <summary>
