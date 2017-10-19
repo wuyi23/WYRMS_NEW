@@ -30,7 +30,7 @@ namespace WYRMS.Tools
         public object AppendData { get; set; }
 
 
-        public bool IsSuccess { get; set; }
+        public bool Success { get; set; }
 
         #endregion
 
@@ -43,7 +43,7 @@ namespace WYRMS.Tools
         public OperationResult(OperationResultType resultType)
         {
             ResultType = resultType;
-            IsSuccess = resultType == OperationResultType.Success;
+            Success = resultType == OperationResultType.Success;
         }
 
         /// <summary>

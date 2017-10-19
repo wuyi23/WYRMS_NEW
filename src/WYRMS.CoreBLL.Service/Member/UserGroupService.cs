@@ -83,7 +83,7 @@ namespace WYRMS.CoreBLL.Service.Member
                 var oldRole = _userGroupReps.FirstOrDefault(c => c.Id == model.Id);
                 if (oldRole == null)
                 {
-                    throw new Exception();
+                    return new OperationResult(OperationResultType.Error, "更新数据失败!");
                 }
                 var other = _userGroupReps.FirstOrDefault(c => c.Id != model.Id && c.GroupName == model.GroupName.Trim());
                 if (other != null)
