@@ -25,10 +25,12 @@ namespace WYRMS.DAL
         }
         #endregion
 
+        #region DbSet<T>
         public DbSet<T> Entities
         {
             get { return _ctx.Set<T>(); }
-        }
+        } 
+        #endregion
 
         #region 查询
 

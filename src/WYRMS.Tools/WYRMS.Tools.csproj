@@ -60,12 +60,8 @@
   <ItemGroup>
     <Compile Include="Enums\EnumPermissionCode.cs" />
     <Compile Include="Enums\Enums.cs" />
-    <Compile Include="Extensions\BusinessException.cs" />
-    <Compile Include="Extensions\ComponentException.cs" />
-    <Compile Include="Extensions\DataAccessException.cs" />
     <Compile Include="Extensions\EnumExtensions.cs" />
     <Compile Include="Extensions\ExpressionExtension.cs" />
-    <Compile Include="Extensions\JQueryDataTableParamModel.cs" />
     <Compile Include="Extensions\ObjectExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Extensions\TryParseException.cs" />
@@ -75,9 +71,6 @@
     <Compile Include="helpers\EncryptionHelper.cs" />
     <Compile Include="helpers\HttpClient.cs" />
     <Compile Include="helpers\IAutofacHelper.cs" />
-    <Compile Include="helpers\jpushConfig.cs" />
-    <Compile Include="helpers\OrderHelper.cs" />
-    <Compile Include="helpers\PublicHelper.cs" />
     <Compile Include="helpers\RegexTool.cs" />
     <Compile Include="helpers\SmsMsg.cs" />
     <Compile Include="NPOI\ExcelNpoi.cs" />

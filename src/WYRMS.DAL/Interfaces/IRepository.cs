@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq.Expressions;
 using WYRMS.Domain.Model;
 
@@ -11,6 +12,10 @@ namespace WYRMS.DAL.Interfaces
     /// <typeparam name="T"></typeparam>
     public interface IRepository<T> where T : class ,new()
     {
+        #region DbSet<T>
+        DbSet<T> Entities { get; }
+        #endregion
+
         #region 查询
         /// <summary>
         /// 根据条件查找对象

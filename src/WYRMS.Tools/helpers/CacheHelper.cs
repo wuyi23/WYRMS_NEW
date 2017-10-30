@@ -8,12 +8,9 @@ namespace WYRMS.Tools.helpers
     {
         public const string StrPermissionsByUid = "StrPermissionsByUid";
 
-        /// <summary>
-        /// 发送优惠卷:{0}为用户id，｛1｝为优惠卷id，｛2｝为Vip类型
-        /// </summary>
-        public const string SendCoupon = "User{0}Coupon{1}Vip{2}";
-
     }
+
+
     public class CacheHelper
     {
         /// <summary>
