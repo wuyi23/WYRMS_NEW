@@ -25,7 +25,6 @@ namespace WYRMS.ViewModel
             get;
             set;
         }
-        public bool isParent { get; set; }
 
         public bool open { get; set; }
     }

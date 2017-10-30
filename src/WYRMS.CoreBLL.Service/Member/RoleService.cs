@@ -136,7 +136,7 @@ namespace WYRMS.CoreBLL.Service.Member
                 id = c.Id,
                 pId = c.ParentId,
                 name = c.Name,
-                isParent = !c.ParentId.HasValue,
+                //isParent = !c.ParentId.HasValue,
                 open = !c.ParentId.HasValue
             }).ToList();
             List<ZTreeVM> permissionNodes =

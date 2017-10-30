@@ -23,7 +23,7 @@ namespace WYRMS.CoreBLL.Service.Member
         private readonly IRepository<Users> _userReps;
         private readonly IDbContextFactory _ctxFac;
 
-        public AccountService(IRepository<Users> userReps,IDbContextFactory ctxFac)
+        public AccountService(IRepository<Users> userReps, IDbContextFactory ctxFac)
         {
             _userReps = userReps;
             _ctxFac = ctxFac;
@@ -153,52 +153,115 @@ namespace WYRMS.CoreBLL.Service.Member
         /// <returns></returns>
         private string GetLeftSideMenus(List<int> permissionIds)
         {
-            List<ModuleVM> parentMenuList = new List<ModuleVM>();
+            List<ModuleVM> menuList = new List<ModuleVM>();
 
             var moduleIds = _ctxFac.Ctx.Permissions.Where(p => permissionIds.Contains(p.Id) && p.Enabled == true)
                 .Select(c => c.ModuleId).Distinct().ToList();
-            var childModules = _ctxFac.Ctx.Modules.Where(c => moduleIds.Contains(c.Id)).Distinct().ToList();
+            var childModules = _ctxFac.Ctx.Modules.Where(c => moduleIds.Contains(c.Id))
+                               .Select(c => new ModuleVM
+                               {
+                                   Id = c.Id,
+                                   ParentId = c.ParentId,
+                                   Name = c.Name,
+                                   LinkUrl = c.LinkUrl,
+                                   Code = c.Code,
+                                   Icon = c.Icon
+                               }).ToList();
 
-            if (childModules.Count > 0)
+            GetMenuTree(childModules, ref menuList);
+            //if (childModules.Count > 0)
+            //{
+
+
+            //var parentIds = childModules.Select(c => c.ParentId).Distinct().ToList();
+            //parentMenuList = _ctxFac.Ctx.Modules.Where(c => parentIds.Contains(c.Id))
+            //               .OrderBy(c => c.Code)
+            //               .Select(c => new ModuleVM { Id = c.Id, Name = c.Name, LinkUrl = c.LinkUrl, Code = c.Code, Icon = c.Icon }).ToList();
+            //foreach (var item in parentMenuList)
+            //{
+            //    var children = childModules.Where(c => c.ParentId == item.Id)
+            //                        .OrderBy(c => c.Code)
+            //                        .Select(c => new ModuleVM { Name = c.Name, LinkUrl = c.LinkUrl, Icon = c.Icon }).ToList();
+            //    if (children.Count > 0)
+            //    {
+            //        item.ChildModules = children;
+            //    }
+            //}
+            //edss  }
+            //TODO:改下面
+
+
+            var menuHtml = new StringBuilder();
+            menuHtml.AppendLine("<ul class='navigation' Id='leftmenu'>");
+            CreateMenuHtml(menuList, ref menuHtml);
+            //foreach (var item in menuList)
+            //{
+            //    menuHtml.AppendLine("<li class='menu-dropdown'>");
+            //    menuHtml.AppendFormat("<a href='#'><i class='menu-icon fa {0}'></i>", item.Icon);
+            //    menuHtml.AppendFormat(" <span>{0}</span><span class='fa arrow'></span>", item.Name);
+            //    menuHtml.AppendLine("</a>");
+            //    menuHtml.AppendLine("<ul class='sub-menu collapse'>");
+            //    foreach (var child in item.ChildModules)
+            //    {
+            //        menuHtml.AppendLine("<li>");
+            //        menuHtml.AppendFormat(" <a href='{0}'><i class='fa fa-fw {1}'></i>{2}</a>", child.LinkUrl.Substring(1), child.Icon,
+            //            child.Name);
+            //        menuHtml.AppendLine("</li>");
+            //    }
+            //    menuHtml.AppendLine(" </ul>");
+            //    menuHtml.AppendLine(" </li>");
+
+            //}
+            menuHtml.AppendLine(" </ul>");
+            return menuHtml.ToString();
+        }
+
+
+        private void CreateMenuHtml(IList<ModuleVM> menuList, ref StringBuilder menuHtml)
+        {
+            foreach (var item in menuList)
             {
-                var parentIds = childModules.Select(c => c.ParentId).Distinct().ToList();
-                parentMenuList = _ctxFac.Ctx.Modules.Where(c => parentIds.Contains(c.Id))
-                               .OrderBy(c => c.Code)
-                               .Select(c => new ModuleVM { Id = c.Id, Name = c.Name, LinkUrl = c.LinkUrl, Code = c.Code, Icon = c.Icon }).ToList();
+                if (item.ChildModules == null || item.ChildModules.Count <= 0)
+                {
+                    menuHtml.AppendLine("<li>");
+                    menuHtml.AppendFormat(" <a href='{0}'><i class='fa fa-fw {1}'></i>{2}</a>", item.LinkUrl.Substring(1), item.Icon,
+                        item.Name);
+                    menuHtml.AppendLine("</li>");
+                }
+                else
+                {
+                    menuHtml.AppendLine("<li class='menu-dropdown'>");
+                    menuHtml.AppendFormat("<a href='#'><i class='menu-icon fa {0}'></i>", item.Icon);
+                    menuHtml.AppendFormat(" <span>{0}</span><span class='fa arrow'></span>", item.Name);
+                    menuHtml.AppendLine("</a>");
+                    menuHtml.AppendLine("<ul class='sub-menu collapse'>");
+                    CreateMenuHtml(item.ChildModules, ref menuHtml);
+                    menuHtml.AppendLine(" </ul>");
+                    menuHtml.AppendLine(" </li>");
+                }
+            }
+        }
+
+        private void GetMenuTree(List<ModuleVM> childModules, ref List<ModuleVM> menuTree)
+        {
+            menuTree.AddRange(childModules.Where(module => !module.ParentId.HasValue));
+            var parentIds = childModules.Where(c => c.ParentId.HasValue).Select(c => c.ParentId).Distinct().ToList();
+            if (parentIds.Count > 0)
+            {
+                var parentMenuList = _ctxFac.Ctx.Modules.Where(c => parentIds.Contains(c.Id))
+                    .OrderBy(c => c.Code)
+                    .Select(c => new ModuleVM { Id = c.Id, ParentId = c.ParentId, Name = c.Name, LinkUrl = c.LinkUrl, Code = c.Code, Icon = c.Icon }).ToList();
                 foreach (var item in parentMenuList)
                 {
                     var children = childModules.Where(c => c.ParentId == item.Id)
-                                        .OrderBy(c => c.Code)
-                                        .Select(c => new ModuleVM { Name = c.Name, LinkUrl = c.LinkUrl, Icon = c.Icon }).ToList();
+                                        .OrderBy(c => c.Code).ToList();
                     if (children.Count > 0)
                     {
                         item.ChildModules = children;
                     }
                 }
+                GetMenuTree(parentMenuList, ref menuTree);
             }
-
-            var menuHtml = new StringBuilder();
-            menuHtml.AppendLine("<ul class='navigation' Id='leftmenu'>");
-            foreach (var item in parentMenuList)
-            {
-                menuHtml.AppendLine("<li class='menu-dropdown'>");
-                menuHtml.AppendFormat("<a href='#'><i class='menu-icon fa {0}'></i>", item.Icon);
-                menuHtml.AppendFormat(" <span>{0}</span><span class='fa arrow'></span>", item.Name);
-                menuHtml.AppendLine("</a>");
-                menuHtml.AppendLine("<ul class='sub-menu collapse'>");
-                foreach (var child in item.ChildModules)
-                {
-                    menuHtml.AppendLine("<li>");
-                    menuHtml.AppendFormat(" <a href='{0}'><i class='fa fa-fw {1}'></i>{2}</a>", child.LinkUrl.Substring(1), child.Icon,
-                        child.Name);
-                    menuHtml.AppendLine("</li>");
-                }
-                menuHtml.AppendLine(" </ul>");
-                menuHtml.AppendLine(" </li>");
-
-            }
-            menuHtml.AppendLine(" </ul>");
-            return menuHtml.ToString();
         }
 
         /// <summary>

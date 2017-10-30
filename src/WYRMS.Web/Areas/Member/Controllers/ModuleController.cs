@@ -62,16 +62,54 @@ namespace WYRMS.Web.Areas.Member.Controllers
         public ActionResult Create()
         {
             var vm = new ModuleVM();
-
-            ViewBag.ParentModuleList = _moduleService.ToListEx(c => c.IsMenu == true && c.Enabled == true && c.ParentId == null,
-                      c => new SelectListItem()
-                      {
-                          Text = c.Name,
-                          Value = SqlFunctions.StringConvert((double)c.Id).Trim()
-                      });
+            ViewBag.ParentModuleList = GetMenuDropDownListSource();
             return PartialView(vm);
 
         }
+
+        private List<SelectListItem> GetMenuDropDownListSource()
+        {
+            var moduleList = _moduleService.ToListEx(c => c.IsMenu && c.Enabled, c => new ModuleVM()
+            {
+                Name = c.Name,
+                Id = c.Id,
+                ParentId = c.ParentId,
+                Code = c.Code
+            });
+            IList<ModuleVM> rootList = moduleList.Where(c => !c.ParentId.HasValue).OrderBy(c => c.Code).ToList();
+            GetModuleTree(moduleList, ref rootList);
+            var selectItemList = new List<SelectListItem>();
+            GetSelectItemList(rootList, ref selectItemList);
+            return selectItemList;
+        }
+
+        private void GetModuleTree(IList<ModuleVM> allList, ref IList<ModuleVM> parentlist)
+        {
+            foreach (var item in parentlist)
+            {
+                IList<ModuleVM> childenList = allList.Where(c => c.ParentId == item.Id).OrderBy(c => c.Code).ToList();
+                if (childenList.Count > 0)
+                {
+                    GetModuleTree(allList, ref childenList);
+                    item.ChildModules = childenList;
+                }
+            }
+        }
+
+        private void GetSelectItemList(IList<ModuleVM> treeModuleVm, ref List<SelectListItem> selectItemList, int level = 1)
+        {
+            foreach (var item in treeModuleVm)
+            {
+                var text = level == 1 ? item.Name : "".PadLeft(level - 1, '　') + "|--" + item.Name;
+                selectItemList.Add(new SelectListItem() { Text = text, Value = item.Id.ToString() });
+                if (!item.ChildModules.IsNull())
+                {
+                    GetSelectItemList(item.ChildModules, ref selectItemList, level + 1);
+                }
+            }
+        }
+
+
         [HttpPost]
         [OprPermission(EnumPermissionCode.AddModule)]
         public ActionResult Create(ModuleVM vm)
@@ -94,14 +132,20 @@ namespace WYRMS.Web.Areas.Member.Controllers
             var modules = _moduleService.GetModule(c => c.Id == id);
             if (modules == null) return PartialView("Create", new ModuleVM());
 
-            ViewBag.ParentModuleList =
-                _moduleService.ToListEx(c => c.IsMenu == true && c.Enabled == true && c.ParentId == null,
-                            c => new SelectListItem()
-                            {
-                                Text = c.Name,
-                                Value = SqlFunctions.StringConvert((double)c.Id).Trim(),
-                                Selected = (modules.ParentId.HasValue && (modules.ParentId.Value == c.Id))
-                            });
+            var menuSource = GetMenuDropDownListSource();
+            if (modules.ParentId.HasValue)
+            {
+                foreach (var item in menuSource)
+                {
+                    if (modules.ParentId.Value.ToString() == item.Value)
+                    {
+                        item.Selected = true;
+                        break;
+                    }
+                }
+            }
+
+            ViewBag.ParentModuleList = menuSource;
             var model = new ModuleVM()
             {
                 Id = modules.Id,
