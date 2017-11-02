@@ -1357,13 +1357,9 @@
     <Content Include="Resources\vendors\ueditor\lang\zh-cn\images\music.png" />
     <Content Include="Resources\vendors\ueditor\lang\zh-cn\images\upload.png" />
     <Content Include="Resources\vendors\ueditor\lang\zh-cn\zh-cn.js" />
-    <Content Include="Resources\vendors\ueditor\net\Bin\Newtonsoft.Json.dll" />
-    <Content Include="Resources\vendors\ueditor\net\Bin\Newtonsoft.Json.pdb" />
-    <Content Include="Resources\vendors\ueditor\net\Bin\Newtonsoft.Json.xml" />
     <Content Include="Resources\vendors\ueditor\net\config.json" />
     <Content Include="Resources\vendors\ueditor\net\controller.ashx" />
     <Content Include="Resources\vendors\ueditor\net\net.sln" />
-    <Content Include="Resources\vendors\ueditor\net\net.v12.suo" />
     <Content Include="Resources\vendors\ueditor\net\README.md" />
     <Content Include="Resources\vendors\ueditor\net\upload\image\20170313\6362504153537198942322988.png" />
     <Content Include="Resources\vendors\ueditor\net\upload\image\20170318\6362543677577367806358685.png" />
@@ -1649,6 +1645,7 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <None Include="Properties\PublishProfiles\wyrms.pubxml" />
     <None Include="Scripts\jquery-1.6.4-vsdoc.js" />
     <Content Include="Scripts\jquery-1.6.4.js" />
     <Content Include="Scripts\jquery-1.6.4.min.js" />
@@ -1693,7 +1690,6 @@
     <Content Include="Areas\Member\Views\User\EditMyImg.cshtml" />
     <Content Include="Areas\Common\Views\Home\DetailPreview.cshtml" />
     <Content Include="Areas\Common\Views\Home\PreviewMobile.cshtml" />
-    <None Include="Properties\PublishProfiles\website.pubxml" />
     <Content Include="Resources\vendors\uploadify\check-exists.php" />
     <Content Include="Resources\vendors\uploadify\index.php" />
     <Content Include="Resources\vendors\uploadify\uploadify.php" />
