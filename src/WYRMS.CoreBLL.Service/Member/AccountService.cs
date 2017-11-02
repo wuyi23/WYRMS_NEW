@@ -193,7 +193,7 @@ namespace WYRMS.CoreBLL.Service.Member
 
             var menuHtml = new StringBuilder();
             menuHtml.AppendLine("<ul class='navigation' Id='leftmenu'>");
-            CreateMenuHtml(menuList, ref menuHtml);
+             CreateMenuHtml(menuList, ref menuHtml);
             //foreach (var item in menuList)
             //{
             //    menuHtml.AppendLine("<li class='menu-dropdown'>");
